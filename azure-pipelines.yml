@@ -1,0 +1,77 @@
+resources:
+  - repo: self
+trigger: ["*"]
+phases:
+  - phase: DockerPhase
+    displayName: Docker
+    condition: succeeded()
+    queue:
+      name: RXN-LINUX
+    variables:
+      - name: ContainerImageName
+        value: "vh-web-docs"
+      - name: RegistryName
+        value: "vhprodacr.azurecr.io"
+      - name: ContainerTag
+        value: $(Build.SourceVersion)
+      - name: SonarCloudPROptions
+        value: " " #Default value for when not building a PR
+      - name: DockerBuildArgs
+        value: " " # Default value
+      - group: SonarCloud
+    steps:
+      #
+      # This shell script generates some extra flags for SonarCloud with information about the PR.
+      # The regex removes the refs/heads/ prefix to the branch names which are incompatible with SonarCloud
+      - bash: |
+          message="##vso[task.setvariable variable=SonarCloudPROptions;]/d:sonar.pullrequest.branch=$(System.PullRequest.SourceBranch) /d:sonar.pullrequest.key=$(System.PullRequest.PullRequestId) /d:sonar.pullrequest.base=$(System.PullRequest.TargetBranch)"
+          echo "${message//refs\/heads\//}"
+        condition: and(succeeded(), eq(variables['Build.Reason'], 'PullRequest'))
+
+      - task: gittools.gitversion.gitversion-task.GitVersion@4
+        displayName: GitVersion
+
+      - task: qetza.replacetokens.replacetokens-task.replacetokens@3
+        displayName: "Replace tokens in Dockerfile"
+        inputs:
+          targetFiles: "**/Dockerfile"
+          keepToken: true
+
+      - task: Docker@1
+        displayName: "Build an image"
+        inputs:
+          azureSubscriptionEndpoint: 'vh-prod (239a4b13-139c-4213-b7b6-2de75f88468d)'
+          azureContainerRegistry: '{"loginServer":"vhprodacr.azurecr.io", "id" : "/subscriptions/239a4b13-139c-4213-b7b6-2de75f88468d/resourceGroups/vh-prod-rg/providers/Microsoft.ContainerRegistry/registries/vhprodacr"}'
+          useDefaultContext: false
+          buildContext: .
+          imageName: "$(ContainerImageName):$(ContainerTag)"
+          includeSourceTags: true
+          arguments: "$(DockerBuildArgs)"
+
+      - task: Docker@1
+        displayName: "Push an image"
+        inputs:
+          azureSubscriptionEndpoint: 'vh-prod (239a4b13-139c-4213-b7b6-2de75f88468d)'
+          azureContainerRegistry: '{"loginServer":"vhprodacr.azurecr.io", "id" : "/subscriptions/239a4b13-139c-4213-b7b6-2de75f88468d/resourceGroups/vh-prod-rg/providers/Microsoft.ContainerRegistry/registries/vhprodacr"}'
+          command: "Push an image"
+          imageName: "$(ContainerImageName):$(ContainerTag)"
+          includeSourceTags: true
+        condition: and(succeeded(), ne(variables['Build.Reason'], 'PullRequest'))
+
+      - task: qetza.replacetokens.replacetokens-task.replacetokens@3
+        displayName: "Replace tokens in **/*.ci.yaml and **/*.ci.env"
+        inputs:
+          targetFiles: "**/*.ci.yaml,**/*.ci.env"
+          keepToken: true
+
+      - task: CopyFiles@2
+        displayName: "Copy Files to: $(Build.ArtifactStagingDirectory)"
+        inputs:
+          Contents: |
+            **/*.ci.yaml
+            **/*.ci.env
+          TargetFolder: "$(Build.ArtifactStagingDirectory)"
+          flattenFolders: true
+
+      - task: PublishBuildArtifacts@1
+        displayName: "Publish Artifact: drop"

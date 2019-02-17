@@ -1,0 +1,45 @@
+site_name: VendorHub Docs
+site_url: https://www.vendorhub.io
+site_description: Project documentation with Markdown.
+site_author: VendorHub Team
+
+repo_name: 'vendorhub/docs'
+repo_url: https://github.com/VendorHub/docs/
+edit_uri: ""
+
+# Copyright
+copyright: 'Copyright &copy; 2019 Rixian LLC'
+
+theme:
+  name: 'material'
+  favicon: 'images/favicon.ico'
+  palette:
+    primary: 'light blue'
+    accent: 'amber'
+
+nav:
+    - Home: index.md
+
+extra:
+  search:
+    language: 'en'
+
+markdown_extensions:
+  - admonition
+  - codehilite:
+      guess_lang: false
+  - toc:
+      permalink: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.inlinehilite
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde

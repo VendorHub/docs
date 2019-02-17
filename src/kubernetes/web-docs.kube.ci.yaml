@@ -1,0 +1,116 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: vh-web-docs
+  annotations:
+    getambassador.io/config: |
+      ---
+      apiVersion: ambassador/v0
+      kind:  Mapping
+      timeout_ms: 30000
+      name:  vh-web-docs-map-#{KubernetesNamespace}#
+      prefix: /_admin/#{KubernetesNamespace}#/vh-web-docs/
+      service: vh-web-docs.#{KubernetesNamespace}#.svc.cluster.local
+      ---
+      apiVersion: ambassador/v0
+      kind:  Mapping
+      timeout_ms: 30000
+      name:  vh-web-docs-map-#{KubernetesNamespace}#-header
+      prefix: /
+      headers:
+        x-rxn-app: vh-web-docs-#{KubernetesNamespace}#
+      service: vh-web-docs.#{KubernetesNamespace}#.svc.cluster.local
+      ---
+      apiVersion: ambassador/v0
+      kind:  Mapping
+      timeout_ms: 30000
+      name:  vh-web-docs-map-#{KubernetesNamespace}#-host
+      prefix: /
+      host: #{KubernetesHostname}#
+      service: vh-web-docs.#{KubernetesNamespace}#.svc.cluster.local
+spec:
+  selector:
+    app: vh-web-docs
+  ports:
+    - port: 443
+      name: vh-web-docs-https
+      targetPort: http-api
+    - port: 80
+      name: vh-web-docs-http
+      targetPort: http-api
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: vh-web-docs
+spec:
+  selector:
+    matchLabels:
+      app: vh-web-docs
+  minReadySeconds: 5
+  replicas: 1
+  revisionHistoryLimit: 1
+  strategy:
+    type: RollingUpdate
+  template:
+    metadata:
+      annotations:
+        ad.datadoghq.com/vh-web-docs.check_names: |
+          [
+            "vh-web-docs-check"
+          ]
+        ad.datadoghq.com/vh-web-docs.init_configs: |
+          [
+            {
+            }
+          ]
+        ad.datadoghq.com/vh-web-docs.instances: |
+          [
+            {
+              "host":"%%host%%", 
+              "port":"%%port%%"
+            }
+          ]
+        ad.datadoghq.com/vh-web-docs.logs: |
+          [
+            {
+              "source":"vh-web-docs",
+              "service":"vh-web-docs"
+            }
+          ]
+      labels:
+        app: vh-web-docs
+      name: vh-web-docs
+    spec:
+      containers:
+        - name: vh-web-docs
+          image: #{RegistryName}#/#{ContainerImageName}#:#{ContainerTag}#
+          resources:
+            requests:
+              memory: "250Mi"
+              cpu: "25m"
+            limits:
+              memory: "1Gi"
+              cpu: "1"
+          ports:
+            - name: http-api
+              containerPort: 80
+          env:
+            - name: DOGSTATSD_HOST_IP
+              valueFrom:
+                fieldRef:
+                  fieldPath: status.hostIP
+            - name: DD_AGENT_HOST
+              valueFrom:
+                fieldRef:
+                  fieldPath: status.hostIP
+            - name: DD_AGENT_PORT
+              value: "8126"
+            - name: CORECLR_ENABLE_PROFILING
+              value: "1"
+            - name: CORECLR_PROFILER
+              value: "{846F5F1C-F9AE-4B07-969E-05C26BC060D8}"
+            - name: CORECLR_PROFILER_PATH
+              value: "/opt/datadog/Datadog.Trace.ClrProfiler.Native.so"
+            - name: DD_INTEGRATIONS
+              value: "/opt/datadog/integrations.json"
