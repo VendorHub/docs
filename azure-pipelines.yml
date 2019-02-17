@@ -42,8 +42,6 @@ phases:
         inputs:
           azureSubscriptionEndpoint: 'vh-prod (239a4b13-139c-4213-b7b6-2de75f88468d)'
           azureContainerRegistry: '{"loginServer":"vhprodacr.azurecr.io", "id" : "/subscriptions/239a4b13-139c-4213-b7b6-2de75f88468d/resourceGroups/vh-prod-rg/providers/Microsoft.ContainerRegistry/registries/vhprodacr"}'
-          useDefaultContext: false
-          buildContext: .
           imageName: "$(ContainerImageName):$(ContainerTag)"
           includeSourceTags: true
           arguments: "$(DockerBuildArgs)"
