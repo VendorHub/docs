@@ -5,17 +5,18 @@ site_author: VendorHub Team
 
 repo_name: 'vendorhub/docs'
 repo_url: https://github.com/VendorHub/docs/
-edit_uri: ""
+edit_uri: "blob/master/src/docs/"
 
 # Copyright
 copyright: 'Copyright &copy; 2019 Rixian LLC'
 
 theme:
   name: 'material'
+  logo: 'images/logo.png'
   favicon: 'images/favicon.ico'
   palette:
     primary: 'light blue'
-    accent: 'amber'
+    accent: 'light blue'
 
 nav:
     - Home: index.md

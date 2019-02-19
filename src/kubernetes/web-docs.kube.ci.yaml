@@ -48,7 +48,7 @@ spec:
     matchLabels:
       app: vh-web-docs
   minReadySeconds: 5
-  replicas: 1
+  replicas: 2
   revisionHistoryLimit: 1
   strategy:
     type: RollingUpdate
