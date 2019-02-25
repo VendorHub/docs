@@ -23,3 +23,5 @@ configuration file.
     * [ ] Praesent sed risus massa
 * [ ] Aenean pretium efficitur erat, donec pharetra, ligula non scelerisque
 * [ ] Nulla vel eros venenatis, imperdiet enim id, faucibus nisi
+* [ ] Jared McAravey
+* [ ] Why hello there
