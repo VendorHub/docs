@@ -24,4 +24,17 @@ configuration file.
 * [ ] Aenean pretium efficitur erat, donec pharetra, ligula non scelerisque
 * [ ] Nulla vel eros venenatis, imperdiet enim id, faucibus nisi
 * [ ] Jared McAravey
-* [ ] Why hello there
+* [x] Why hello there
+
+# /tenants/{tenantId}/cmd/info
+### Overview
+This gives you certain information on the requested file
+## Parameters
+
+## Responses
+```json
+{
+    id: string,
+    parentId: string
+}
+```
