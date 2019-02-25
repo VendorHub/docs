@@ -6,7 +6,7 @@ phases:
     displayName: Docker
     condition: succeeded()
     queue:
-      name: Hosted Ubuntu 1604
+      name: RXN-LINUX
     variables:
       - name: ContainerImageName
         value: "vh-web-docs"
