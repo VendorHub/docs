@@ -3,15 +3,13 @@
 
 ## Request Parameters
 ### 1 Path Parameter
-   -   tenantId 
-    >- _string_
-    >- ___required___
-    >- __format__: guid
+   | Property       | Description | Type     | Format | Is Required |
+|----------------|-------------|----------|--------|-------------|
+| tenantId            |             | _string_ | guid   | ✔           |
 ### 1 Query Parameter
-     -  path
-     >- _string_
-     >- ___required___
-     >- __pattern__:
+ | Property       | Description | Type     | pattern | Is Required |
+|----------------|-------------|----------|--------|-------------|
+| Path             |             | _string_ |    | ✔           |
   ___
 ## Responses
 
@@ -29,19 +27,19 @@
   - ### Schema
 
 
-| Property       | Description | Type     | Format | Is Required |
-|----------------|-------------|----------|--------|-------------|
-| id             |             | _string_ | guid   | ✔           |
-| parentid       |             | _string_ | guid   | ✔           |
-| tenantId       |             | _string_ | guid   | ✔           |
-| volumeId       |             | _string_ | guid   | ✔           |
-| partitionId    |             | _string_ | guid   | ✔           |
-| name           |             | _string_ |        | ✔           |
-| fullPath       |             | _string_ |        | ✔           |
-| attributes     |             | _string_ |        | ✔           |
-| creationTime   |             | _string_ |        | ✔           |
-| lastAccessTime |             | _string_ |        | ✔           |
-| lastWriteTime  |             | _string_ |        | ✔           |
+| Property | Description | Type | Format | Is Required |
+|----------|-------------|------|--------|-------------|
+| id       |             |   _string_   |    guid    | ✔           |
+|   parentid       |             |    _string_  |    guid    |      ✔       |
+|     tenantId     |             |   _string_   |     guid   |      ✔       |
+|       volumeId   |             |   _string_   |     guid   |      ✔       |
+|    partitionId      |             |    _string_  |    guid    |       ✔      |
+|    name      |             |   _string_   |        |         ✔    |
+|   fullPath       |             |   _string_   |        |       ✔      |
+|    attributes      |             |  _string_    |        |        ✔     |
+|      creationTime    |             |   _string_   |        |          ✔   |
+|   lastAccessTime       |             |    _string_  |        |          ✔   |
+|    lastWriteTime      |             |     _string_ |        |         ✔    |
 
 
 
