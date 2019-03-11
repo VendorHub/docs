@@ -2,20 +2,22 @@
 
 
 ## Request Parameters
- - ### 1 Path Parameter
+### 1 Path Parameter
    -   tenantId 
     >- _string_
     >- ___required___
     >- __format__: guid
-- ### 1 Query Parameter
+### 1 Query Parameter
      -  path
      >- _string_
      >- ___required___
      >- __pattern__:
   ___
 ## Responses
- ### __200__
- - ### 3 Headers
+
+### __200__
+
+### 3 Headers
     - Date
    >- _string_
    >- ___format___: date-time
@@ -27,19 +29,19 @@
   - ### Schema
 
 
-| Property | Description | Type | Format | Is Required |
-|----------|-------------|------|--------|-------------|
-| id       |             |   _string_   |    guid    | ✔           |
-|   parentid       |             |    _string_  |    guid    |      ✔       |
-|     tenantId     |             |   _string_   |     guid   |      ✔       |
-|       volumeId   |             |   _string_   |     guid   |      ✔       |
-|    partitionId      |             |    _string_  |    guid    |       ✔      |
-|    name      |             |   _string_   |        |         ✔    |
-|   fullPath       |             |   _string_   |        |       ✔      |
-|    attributes      |             |  _string_    |        |        ✔     |
-|      creationTime    |             |   _string_   |        |          ✔   |
-|   lastAccessTime       |             |    _string_  |        |          ✔   |
-|    lastWriteTime      |             |     _string_ |        |         ✔    |
+| Property       | Description | Type     | Format | Is Required |
+|----------------|-------------|----------|--------|-------------|
+| id             |             | _string_ | guid   | ✔           |
+| parentid       |             | _string_ | guid   | ✔           |
+| tenantId       |             | _string_ | guid   | ✔           |
+| volumeId       |             | _string_ | guid   | ✔           |
+| partitionId    |             | _string_ | guid   | ✔           |
+| name           |             | _string_ |        | ✔           |
+| fullPath       |             | _string_ |        | ✔           |
+| attributes     |             | _string_ |        | ✔           |
+| creationTime   |             | _string_ |        | ✔           |
+| lastAccessTime |             | _string_ |        | ✔           |
+| lastWriteTime  |             | _string_ |        | ✔           |
 
 
 
