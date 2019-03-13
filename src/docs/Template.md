@@ -1,7 +1,7 @@
 # **GET**   /tenants/{tenantId}/cmd/info
 
 
-## Request Parameters
+## __Request Parameters__
 ### 1 Path Parameter
    | Property       | Description | Type     | Format | Is Required |
 |----------------|-------------|----------|--------|-------------|
@@ -13,19 +13,18 @@
 |----------------|-------------|----------|--------|-------------|
 | Path             |     quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur        | _string_ |    | ✔           |
   ___
-## Responses
+## __Responses__
 
 ### __200__
 
 ### 3 Headers
-    - Date
-   >- _string_
-   >- ___format___: date-time
-
-   - Content-Type
-   >- _string_
-   - Content-Encoding
-   >- _string_
+    
+ | Property         | Description | Type     | Format    | Is Required |
+|------------------|-------------|----------|-----------|-------------|
+| date             |      quae ab illo inventore       | _string_ | date-time |             |
+| Content-Type     |    laboriosam, nisi ut aliquid ex ea commodi consequatur         | _string_ |           |             |
+| Content-Encoding |        dolore magnam aliquam     | _string_ |           |             |
+  
   - ### Schema
 
 
