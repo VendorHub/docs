@@ -10,6 +10,8 @@ metadata:
       timeout_ms: 30000
       name:  vh-web-docs-map-#{KubernetesNamespace}#
       prefix: /_admin/#{KubernetesNamespace}#/vh-web-docs/
+      add_response_headers:
+        Strict-Transport-Security "max-age=86400;"
       service: vh-web-docs.#{KubernetesNamespace}#.svc.cluster.local
       ---
       apiVersion: ambassador/v0
@@ -17,6 +19,8 @@ metadata:
       timeout_ms: 30000
       name:  vh-web-docs-map-#{KubernetesNamespace}#-header
       prefix: /
+      add_response_headers:
+        Strict-Transport-Security "max-age=86400;"
       headers:
         x-rxn-app: vh-web-docs-#{KubernetesNamespace}#
       service: vh-web-docs.#{KubernetesNamespace}#.svc.cluster.local
@@ -26,6 +30,8 @@ metadata:
       timeout_ms: 30000
       name:  vh-web-docs-map-#{KubernetesNamespace}#-host
       prefix: /
+      add_response_headers:
+        Strict-Transport-Security "max-age=86400;"
       host: #{KubernetesHostname}#
       service: vh-web-docs.#{KubernetesNamespace}#.svc.cluster.local
 spec:
