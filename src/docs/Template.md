@@ -1,8 +1,18 @@
+---
+title: Overview
+summary: A brief description of my document.
+authors:
+    - Jared McAravey
+date: 2018-07-10
+some_url: https://example.com
+---
+
 # **GET**   /tenants/{tenantId}/cmd/info
 
-
 ## __Request Parameters__
+
 ### 1 Path Parameter
+
    | Property       | Description | Type     | Format | Is Required |
 |----------------|-------------|----------|--------|-------------|
 | tenantId            |      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun       | _string_ | guid   | ✔           |
@@ -13,20 +23,20 @@
 |----------------|-------------|----------|--------|-------------|
 | Path             |     quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur        | _string_ |    | ✔           |
   ___
+
 ## __Responses__
 
 ### __200__
 
-### 3 Headers
-    
+### Headers
+
  | Property         | Description | Type     | Format    | Is Required |
 |------------------|-------------|----------|-----------|-------------|
 | date             |      quae ab illo inventore       | _string_ | date-time |             |
 | Content-Type     |    laboriosam, nisi ut aliquid ex ea commodi consequatur         | _string_ |           |             |
 | Content-Encoding |        dolore magnam aliquam     | _string_ |           |             |
   
-  - ### Schema
-
+### Schema
 
 | Property | Description | Type | Format | Is Required |
 |----------|-------------|------|--------|-------------|
@@ -41,10 +51,6 @@
 |      creationTime    |     On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment        |   _string_   |        |          ✔   |
 |   lastAccessTime       |             |    _string_  |        |          ✔   |
 |    lastWriteTime      |         dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam    |     _string_ |        |         ✔    |
-
-
-
-
 
 ```Test Responses tab= 
 200 dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam

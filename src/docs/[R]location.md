@@ -1,8 +1,9 @@
 # **GET**   /tenants/{tenantId}/apps/[appId]/location
 
-
 ## __Request Parameters__
+
 ### 2 Path Parameters
+
    | Property       | Description | Type     | Format | Is Required |
 |----------------|-------------|----------|--------|-------------|
 | tenantId       |           |   _string_   |    guid    | ✔           |
@@ -12,10 +13,7 @@
 
 ### __200__
 
-
-  
-  - ### Schema
-
+### Schema
 
 | Property       | Description | Type     | Format | Is Required |
 |----------------|-------------|----------|--------|-------------|
@@ -33,7 +31,6 @@
 | hasChildren    |             |_boolean_ |        | ✔           |
 
 ## __Test Requests__
-
 
 ```cURL tab= 
 Example1

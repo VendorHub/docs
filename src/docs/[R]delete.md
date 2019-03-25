@@ -1,6 +1,5 @@
 # **post**   /tenants/{tenantId}/cmd/delete
 
-
 ## __Request Parameters__
 
 ### 1 Path Parameter
@@ -13,17 +12,13 @@
 
 ### __204__
 
-
-  
-  - ### Schema
-
+### Schema
 
 | Property | Description | Type | Format | Is Required |
 |----------|-------------|------|--------|-------------|
 | _object_       |       |  |      |           |
 
 ## __Test Requests__
-
 
 ```cURL tab= 
 Example1
