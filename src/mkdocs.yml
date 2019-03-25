@@ -21,6 +21,9 @@ theme:
 nav:
     - Home: index.md
     - Test: Template.md
+    - 'Api Reference':
+        - Apps: '[R]apps.md'
+        - Copy: '[R]copy.md'
 
 extra:
   search:
