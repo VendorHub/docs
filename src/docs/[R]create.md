@@ -1,6 +1,5 @@
 # **post**   /tenants/{tenantId}/cmd/create
 
-
 ## __Request Parameters__
 
 ### 1 Path Parameter
@@ -19,10 +18,7 @@
 
 ### __200__
 
-
-  
-  - ### Schema
-
+### Schema
 
 | Property       | Description | Type     | Format | Is Required |
 | -------------- | ----------- | -------- | ------ | ----------- |
@@ -37,8 +33,8 @@
 | creationTime   |             | _string_ |        | ✔           |
 | lastAccessTime |             | _string_ |        | ✔           |
 | lastWriteTime  |             | _string_ |        | ✔           |
-## __Test Requests__
 
+## __Test Requests__
 
 ```cURL tab= 
 Example1

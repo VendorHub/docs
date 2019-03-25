@@ -59,10 +59,10 @@ Example2
 
 ## __Example Responses__
 
-```cURL tab=cURL
+```cURL tab="cURL"
 Example1
 ```
 
-```C# tab=C#
+```C# tab="C#"
 Example2
 ```

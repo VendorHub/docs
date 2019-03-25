@@ -20,11 +20,28 @@ theme:
 
 nav:
     - Home: index.md
-    - Test: Template.md
     - 'Api Reference':
-        - Apps: '[R]apps.md'
-        - Copy: '[R]copy.md'
-
+        - Overview: Template.md
+        - 'Operations':
+            - Copy: '[R]copy.md'
+            - Create: '[R]create.md'
+            - Delete: '[R]delete.md'
+            - 'List children': '[R]dir.md'
+            - Download: '[R]download.md'
+            - Exist: '[R]exist.md'
+            - 'Get info': '[R]info.md'
+            - 'Get installation folder': '[R]location.md'
+            - Move: '[R]move.md'
+            - 'List file streams': '[R]streams.md'
+        - 'Marketplace':
+            - 'List of available apps': '[R]apps.md'
+        - 'System':
+            - 'Initial setup': '[R]install.md'
+            - 'Create volume': '[R]Volume(Post).md'
+            - 'List volume': '[R]Volume(Get).md'
+        - 'Directory Watchers':
+            'List directory watchers': '[R]watcher.md'
+        
 extra:
   search:
     language: 'en'
