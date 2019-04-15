@@ -1,4 +1,4 @@
-# **Post**   /tenants/{tenantId}/volumes
+# **POST**   /tenants/{tenantId}/volumes
 
 ## __Request Parameters__
 

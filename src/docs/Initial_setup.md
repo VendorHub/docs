@@ -1,4 +1,4 @@
-# **Post**   /tenants/{tenantId}/apps/{appleId}/install
+# **POST**   /tenants/{tenantId}/apps/{appleId}/install
 
 ## __Request Parameters__
 
