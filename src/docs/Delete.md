@@ -1,4 +1,4 @@
-# **post**   /tenants/{tenantId}/cmd/delete
+# **POST**   /tenants/{tenantId}/cmd/delete
 
 ## __Request Parameters__
 

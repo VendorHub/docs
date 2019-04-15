@@ -1,4 +1,4 @@
-# **post**   /tenants/{tenantId}/cmd/create
+# **POST**   /tenants/{tenantId}/cmd/create
 
 ## __Request Parameters__
 
