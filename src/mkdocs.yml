@@ -21,26 +21,26 @@ theme:
 nav:
     - Home: index.md
     - 'Api Reference':
-        - Overview: Template.md
+        - Overview: Overview.md
         - 'Operations':
-            - Copy: '[R]copy.md'
-            - Create: '[R]create.md'
-            - Delete: '[R]delete.md'
-            - 'List children': '[R]dir.md'
-            - Download: '[R]download.md'
-            - Exist: '[R]exists.md'
-            - 'Get info': '[R]info.md'
-            - 'Get installation folder': '[R]location.md'
-            - Move: '[R]move.md'
-            - 'List file streams': '[R]streams.md'
+            - Copy: 'Copy.md'
+            - Create: 'Create.md'
+            - Delete: 'Delete.md'
+            - 'List children': 'List_Children.md'
+            - Download: 'Download.md'
+            - Exist: 'Exists.md'
+            - 'Get info': 'Get_info.md'
+            - 'Get installation folder': 'Get_installation_folder.md'
+            - Move: 'Move.md'
+            - 'List file streams': 'List_file_streams.md'
         - 'Marketplace':
-            - 'List of available apps': '[R]apps.md'
+            - 'List of available apps': 'List_of_available_apps.md'
         - 'System':
-            - 'Initial setup': '[R]install.md'
-            - 'Create volume': '[R]Volume(Post).md'
-            - 'List volume': '[R]Volume(Get).md'
+            - 'Initial setup': 'Initial_setup.md'
+            - 'Create volume': 'Create_Volume.md'
+            - 'List volume': 'List_Volume.md'
         - 'Directory Watchers':
-            'List directory watchers': '[R]watcher.md'
+            'List directory watchers': 'List_directory_watchers.md'
         
 extra:
   search:

@@ -1,4 +1,4 @@
-# **Post**   /tenants/{tenantId}/cmd/move
+# **POST**   /tenants/{tenantId}/cmd/move
 
 ## __Request Parameters__
 
