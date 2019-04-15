@@ -2,11 +2,11 @@
 
 ## __Request Parameters__
 
-### 1 Path Parameter
+### Path Parameters
 
-   | Property       | Description | Type     | Format | Is Required |
+| Property       | Description | Type     | Format | Is Required |
 |----------------|-------------|----------|--------|-------------|
-| tenantId            |        | _string_ | guid   | ✔           |
+| tenantId       | The ID of the tenant    | _string_ | guid   | ✔           |
 
 ## __Responses__
 

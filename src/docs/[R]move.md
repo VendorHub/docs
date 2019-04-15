@@ -2,18 +2,18 @@
 
 ## __Request Parameters__
 
-## 1 Path Parameter
+## Path Parameters
 
-   | Property       | Description | Type     | Format | Is Required |
-|----------------|-------------|----------|--------|-------------|
-| tenantId            |      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun       | _string_ | guid   | ✔           |
+   | Property | Description | Type     | Format | Is Required |
+   | -------- | ----------- | -------- | ------ | ----------- |
+   | tenantId |     The ID of the tenant        | _string_ | guid   | ✔           |
 
-### 2 Query Parameters
+### Query Parameters
 
- | Property       | Description | Type     | pattern | Is Required |
-|----------------|-------------|----------|--------|-------------|
-| source          |            | _string_ |    | ✔           |
-| target       |            | _string_ |    | ✔           |
+ | Property | Description | Type     | Format | Is Required |
+ | -------- | ----------- | -------- | ------- | ----------- |
+ | source   |             | _string_ |         | ✔           |
+ | target   |             | _string_ |         | ✔           |
   ___
 
 ## __Responses__
@@ -23,8 +23,8 @@
 ### Schema
 
 | Property | Description | Type | Format | Is Required |
-|----------|-------------|------|--------|-------------|
-| _object_      |        |     |      |        |
+| -------- | ----------- | ---- | ------ | ----------- |
+| _object_ |             |      |        |             |
 
 ## __Test Requests__
 

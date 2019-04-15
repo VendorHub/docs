@@ -2,42 +2,41 @@
 
 ## __Request Parameters__
 
-### 1 Path Parameter
+### Path Parameters
 
-   | Property | Description | Type     | Format | Is Required |
-   | -------- | ----------- | -------- | ------ | ----------- |
-   | tenantId |             | _string_ | guid   | ✔           |
+   | Property | Description                       | Type     | Format | Is Required |
+   | -------- | --------------------------------- | -------- | ------ | ----------- |
+   | tenantId | The path to the file or directory | _string_ | guid   | ✔           |
 
 ### 1 Query Parameter
 
- | Property | Description                                                                                                 | Type     | pattern | Is Required |
- | -------- | ----------------------------------------------------------------------------------------------------------- | -------- | ------- | ----------- |
- | Path     | quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur | _string_ |         | ✔           |
-  ___
+ | Property | Description                       | Type     | Format | Is Required |
+ | -------- | --------------------------------- | -------- | ------ | ----------- |
+ | Path     | The path to the file or directory | _string_ |        | ✔           |
 
 ## __Responses__
 
 ### __200__
 
-### 1 Example
+### Examples
   
 ### Schema
 
 
-| Property        | Description | Type     | Format | Is Required |
-| --------------- | ----------- | -------- | ------ | ----------- |
-| id              |             | _string_ | guid   | ✔           |
-| parentid        |             | _string_ | guid   | ✔           |
-| tenantId        |             | _string_ | guid   | ✔           |
-| volumeId        |             | _string_ | guid   | ✔           |
-| partitionId     |             | _string_ | guid   | ✔           |
-| name            |             | _string_ |        | ✔           |
-| fullPath        |             | _string_ |        | ✔           |
-| attributes      |             | _string_ |        | ✔           |
-| creationTime    |             | _string_ |        | ✔           |
-| lastAccessTime  |             | _string_ |        | ✔           |
-| lastWriteTime   |             | _string_ |        | ✔           |
-| _array[object]_ |             |          |        |             |
+| Property        | Description                                                                                | Type     | Format | Is Required |
+| --------------- | ------------------------------------------------------------------------------------------ | -------- | ------ | ----------- |
+| id              | The ID of the file or directory                                                            | _string_ | guid   | ✔           |
+| parentid        | **The** ID of the parent directory                                                             | _string_ | guid   | ✔           |
+| tenantId        | The ID of the tenant                                                                       | _string_ | guid   | ✔           |
+| volumeId        | The ID of the volume                                                                       | _string_ | guid   | ✔           |
+| partitionId     | The ID of the partition containing the file or directory                                   | _string_ | guid   | ✔           |
+| name            | The name of the file or directory                                                          | _string_ |        | ✔           |
+| fullPath        | The full path of the file or directory                                                     | _string_ |        | ✔           |
+| attributes      |                                                                                            | _string_ |        | ✔           |
+| creationTime    | The time the resource was created                                                          | _string_ |        | ✔           |
+| lastAccessTime  | The last time the resource was accessed. Either reading or writing are considered accesses | _string_ |        | ✔           |
+| lastWriteTime   | The last time the resource was written                                                     | _string_ |        | ✔           |
+| _array[object]_ |                                                                                            |          |        |             |
 
 ## __Test Requests__
 

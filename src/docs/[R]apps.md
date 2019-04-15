@@ -1,25 +1,24 @@
 # **GET**   /tenants/{tenantId}/apps
 
-
 ## __Request Parameters__
 
-### 1 Path Parameter
+### Path Parameters
   
-   | Property | Description | Type     | Format | Is Required |
-   | -------- | ----------- | -------- | ------ | ----------- |
-   | tenantId |             | _string_ | guid   | ✔           |
+   | Property | Description          | Type     | Format | Is Required |
+   | -------- | -------------------- | -------- | ------ | ----------- |
+   | tenantId | The ID of the tenant | _string_ | guid   | ✔           |
 
 ## __Responses__
 
-### __200__
+___200___
 
 ### Schema
 
-| Property       | Description | Type     | Format | Is Required |
-| -------------- | ----------- | -------- | ------ | ----------- |
-| array [object] |             |          |        |             |
-| applicationId  |             | _string_ | guid   |             |
-| name           |             | _string_ |        | ✔           |
+| Property       | Description                       | Type     | Format | Is Required |
+| -------------- | --------------------------------- | -------- | ------ | ----------- |
+| array [object] |                                   |          |        |             |
+| applicationId  |                                   | _string_ | guid   |             |
+| name           | The name of the file or directory | _string_ |        | ✔           |
 
 ## __Test Requests__
 

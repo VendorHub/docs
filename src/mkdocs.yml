@@ -28,7 +28,7 @@ nav:
             - Delete: '[R]delete.md'
             - 'List children': '[R]dir.md'
             - Download: '[R]download.md'
-            - Exist: '[R]exist.md'
+            - Exist: '[R]exists.md'
             - 'Get info': '[R]info.md'
             - 'Get installation folder': '[R]location.md'
             - Move: '[R]move.md'

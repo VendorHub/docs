@@ -2,23 +2,22 @@
 
 ## __Request Parameters__
 
-### 1 Path Parameter
+### Path Parameters
   
    | Property | Description | Type     | Format | Is Required |
    | -------- | ----------- | -------- | ------ | ----------- |
-   | tenantId |             | _string_ | guid   | ✔           |
+   | tenantId |       The ID of the tenant      | _string_ | guid   | ✔           |
 
-### 2 Query Parameters
+### Query Parameters
 
- | Property | Description | Type     | pattern | Is Required |
+ | Property | Description | Type     | Format | Is Required |
  | -------- | ----------- | -------- | ------- | ----------- |
  | source   |             | _string_ |         | ✔           |
  | target   |             | _string_ |         | ✔           |
-  ___
 
 ## __Responses__
 
-### __204__
+## __204__
 
 ### Schema
 

@@ -2,12 +2,12 @@
 
 ## __Request Parameters__
 
-### 2 Path Parameters
+### Path Parameters
 
-   | Property       | Description | Type     | Format | Is Required |
-|----------------|-------------|----------|--------|-------------|
-| tenantId       |           |   _string_   |    guid    | ✔           |
-|   appId    |             |    _string_  |    guid    |      ✔       |
+   | Property | Description          | Type     | Format | Is Required |
+   | -------- | -------------------- | -------- | ------ | ----------- |
+   | tenantId | The ID of the tenant | _string_ | guid   | ✔           |
+   | appId    |                      | _string_ | guid   | ✔           |
 
 ## __Responses__
 
@@ -15,20 +15,20 @@
 
 ### Schema
 
-| Property       | Description | Type     | Format | Is Required |
-|----------------|-------------|----------|--------|-------------|
-| id             |             | _string_ | guid   | ✔           |
-| parentid       |             | _string_ | guid   | ✔           |
-| tenantId       |             | _string_ | guid   | ✔           |
-| volumeId       |             | _string_ | guid   | ✔           |
-| partitionId    |             | _string_ | guid   | ✔           |
-| name           |             | _string_ |        | ✔           |
-| fullPath       |             | _string_ |        | ✔           |
-| attributes     |             | _string_ |        | ✔           |
-| creationTime   |             | _string_ |        | ✔           |
-| lastAccessTime |             | _string_ |        | ✔           |
-| lastWriteTime  |             | _string_ |        | ✔           |
-| hasChildren    |             |_boolean_ |        | ✔           |
+| Property       | Description                                                                                | Type      | Format | Is Required |
+| -------------- | ------------------------------------------------------------------------------------------ | --------- | ------ | ----------- |
+| id             | The ID of the file or directory                                                            | _string_  | guid   | ✔           |
+| parentid       | The ID of the parent directory                                                             | _string_  | guid   | ✔           |
+| tenantId       | The ID of the tenant                                                                       | _string_  | guid   | ✔           |
+| volumeId       | The ID of the volume                                                                       | _string_  | guid   | ✔           |
+| partitionId    | The ID of the partition containing the file or directory                                   | _string_  | guid   | ✔           |
+| name           | The name of the file or directory                                                          | _string_  |        | ✔           |
+| fullPath       | The full path of the file or directory                                                     | _string_  |        | ✔           |
+| attributes     |                                                                                            | _string_  |        | ✔           |
+| creationTime   | The time the resource was created                                                          | _string_  |        | ✔           |
+| lastAccessTime | The last time the resource was accessed. Either reading or writing are considered accesses | _string_  |        | ✔           |
+| lastWriteTime  | The last time the resource was written                                                     | _string_  |        | ✔           |
+| hasChildren    |                                                                                            | _boolean_ |        | ✔           |
 
 ## __Test Requests__
 

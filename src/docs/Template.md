@@ -52,33 +52,12 @@ some_url: https://example.com
 |   lastAccessTime       |             |    _string_  |        |          ✔   |
 |    lastWriteTime      |         dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam    |     _string_ |        |         ✔    |
 
-```Test Responses tab= 
-200 dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam
+## __Example Responses__
+
+```cURL tab="cURL"
+Example1
 ```
 
-```C tab=
-#include 
-
-int main(void) {
-  printf("hello, world\n");
-}
-```
-
-```C++ tab=
-#include <iostream>
-
-int main() {
-  std::cout << "Hello, world!\n";
-  return 0;
-}
-```
-
-```C# tab=
-using System;
-
-class Program {
-  static void Main(string[] args) {
-    Console.WriteLine("Hello, world!");
-  }
-}
+```C# tab="C#"
+Example2
 ```
