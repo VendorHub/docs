@@ -23,7 +23,7 @@
 | submissionCount    |             | _integer_     |        |             |
 | submissionThisWeek |             | _integer_     |        |             |
 | submissionLastWeek |             | _integer_     |        |             |
-| createdOn       |             | _string_      | date   |             |
+| createdOn          |             | _string_      | date   |             |
 
 ## __Test Requests__
 
@@ -44,3 +44,6 @@ Example1
 ```C# tab=
 Example2
 ```
+
+## Footnotes
+

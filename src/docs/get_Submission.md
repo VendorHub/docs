@@ -24,6 +24,19 @@
 | submittedOn  |             | _string_      |        |             |
 | fields*      |             | array[object] |        |             |
 | attachments* |             | array[object] |        |             |
+
+#### Complex schema
+
+| Property        | Relation | Type          | Format | Description |
+| --------------- | -------- | ------------- | ------ | ----------- |
+| __fields___     | Main     | array[object] |        |             |
+| name            | Subset   | _string_      |        |             |
+| value           | Subset   | _string_      |        |             |
+| __attachments__ | Main     | array[object] |        |             |
+| fileName        | Subset   | _string_      |        |             |
+| length          | Subset   | __integer__   |        |             |
+| mimeType        | Subset   | _string_      |        |             |
+
 ## __Test Requests__
 
 ```cURL tab= 

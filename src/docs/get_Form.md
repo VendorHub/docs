@@ -17,14 +17,15 @@
 
 | Property           | Description | Type          | Format | Is Required |
 | ------------------ | ----------- | ------------- | ------ | ----------- |
-|  _object_     |             |               |        |             |
+| _object_           |             |               |        |             |
 | formId             |             | _string_      | guid   | ✔           |
 | name               |             | _string_      |        |             |
 | fields*            |             | array[object] |        |             |
 | submissionCount    |             | _integer_     |        |             |
 | submissionThisWeek |             | _integer_     |        |             |
 | submissionLastWeek |             | _integer_     |        |             |
-| createdOn       |             | _string_      | date   |             |
+| createdOn          |             | _string_      | date   |             |
+
 ## __Test Requests__
 
 ```cURL tab= 
