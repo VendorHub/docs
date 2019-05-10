@@ -22,17 +22,22 @@
 | formId       |             | _string_      | guid   |             |
 | submissionId |             | _string_      | guid   |             |
 | submittedOn  |             | _string_      |        |             |
-| fields*      |             | array[object] |        |             |
-| attachments* |             | array[object] |        |             |
+| fields*      |             | array[[Field](#field-schema)] |        |             |
+| attachments* |             | array[[attachment](#attachment-schema)] |        |             |
 
-#### Complex schema
+##### Field schema
 
 | Property        | Relation | Type          | Format | Description |
 | --------------- | -------- | ------------- | ------ | ----------- |
-| __fields___     | Main     | array[object] |        |             |
+| __fields__      | __main__ | array[object] |        |             |
 | name            | Subset   | _string_      |        |             |
 | value           | Subset   | _string_      |        |             |
-| __attachments__ | Main     | array[object] |        |             |
+
+##### attachment schema
+
+| Property        | Relation | Type          | Format | Description |
+| --------------- | -------- | ------------- | ------ | ----------- |
+| __attachments__ | __main__ | array[object] |        |             |
 | fileName        | Subset   | _string_      |        |             |
 | length          | Subset   | __integer__   |        |             |
 | mimeType        | Subset   | _string_      |        |             |
