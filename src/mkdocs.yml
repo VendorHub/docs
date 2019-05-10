@@ -23,24 +23,34 @@ nav:
     - 'Api Reference':
         - Overview: Overview.md
         - 'Operations':
-            - Copy: 'Copy.md'
-            - Create: 'Create.md'
-            - Delete: 'Delete.md'
-            - 'List children': 'List_Children.md'
-            - Download: 'Download.md'
-            - Exist: 'Exists.md'
-            - 'Get info': 'Get_info.md'
-            - 'Get installation folder': 'Get_installation_folder.md'
-            - Move: 'Move.md'
-            - 'List file streams': 'List_file_streams.md'
+            - Copy: 'copy.md'
+            - Create: 'create.md'
+            - Delete: 'delete.md'
+            - 'List children': 'list_Children.md'
+            - Download: 'download.md'
+            - Exist: 'exists.md'
+            - 'Get info': 'get_info.md'
+            - 'Get installation folder': 'get_installation_folder.md'
+            - Move: 'move.md'
+            - 'List file streams': 'list_file_streams.md'
+        - 'Forms':
+            - 'List Forms' : 'list_forms.md'
+            - 'Create Form' : 'create_Form.md'
+            - 'install Forms' : 'install_Forms.md'
+            - 'Get Form' : 'get_Form.md'
+            - 'Submit Form' : 'submit_Form.md'
+            - 'Get Submission' : 'get_Submission.md'
+            - 'Get Sumbission Attachment' : 'get_Submission_Attachment.md'
+            - 'List Webhooks' : 'list_Webhooks.md'
+            - 'Create Webhook' : 'create_Webhook.md'
         - 'Marketplace':
-            - 'List of available apps': 'List_of_available_apps.md'
+            - 'List of available apps': 'list_of_available_apps.md'
         - 'System':
-            - 'Initial setup': 'Initial_setup.md'
-            - 'Create volume': 'Create_Volume.md'
-            - 'List volume': 'List_Volume.md'
+            - 'Initial setup': 'initial_setup.md'
+            - 'Create volume': 'create_Volume.md'
+            - 'List volume': 'list_Volume.md'
         - 'Directory Watchers':
-            'List directory watchers': 'List_directory_watchers.md'
+            'list directory watchers': 'List_directory_watchers.md'
         
 extra:
   search:

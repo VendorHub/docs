@@ -7,7 +7,7 @@ date: 2018-07-10
 some_url: https://example.com
 ---
 
-# **GET**   /tenants/{tenantId}/cmd/info
+# **GET** /tenants/{tenantId}/cmd/info
 
 ## __Request Parameters__
 
