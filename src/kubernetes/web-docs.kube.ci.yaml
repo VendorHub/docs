@@ -28,6 +28,22 @@ metadata:
       prefix: /
       host: #{KubernetesHostname}#
       service: vh-web-docs.#{KubernetesNamespace}#.svc.cluster.local
+      ---
+      apiVersion: ambassador/v0
+      kind:  Mapping
+      timeout_ms: 30000
+      name:  vh-web-docs-map-trafficmanager-#{KubernetesNamespace}#-host
+      prefix: /
+      host: #{TrafficManagerHostname}#
+      service: vh-web-docs.#{KubernetesNamespace}#.svc.cluster.local
+      ---
+      apiVersion: ambassador/v0
+      kind:  Mapping
+      timeout_ms: 30000
+      name:  vh-web-docs-map-publichost-#{KubernetesNamespace}#-host
+      prefix: /
+      host: #{PublicHostname}#
+      service: vh-web-docs.#{KubernetesNamespace}#.svc.cluster.local
 spec:
   selector:
     app: vh-web-docs
@@ -43,6 +59,12 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: vh-web-docs
+  labels:
+    kube-monkey/enabled: enabled
+    kube-monkey/identifier: vh-web-docs
+    kube-monkey/mtbf: '1'
+    kube-monkey/kill-mode: "fixed"
+    kube-monkey/kill-value: '1'
 spec:
   selector:
     matchLabels:
@@ -54,31 +76,9 @@ spec:
     type: RollingUpdate
   template:
     metadata:
-      annotations:
-        ad.datadoghq.com/vh-web-docs.check_names: |
-          [
-            "vh-web-docs-check"
-          ]
-        ad.datadoghq.com/vh-web-docs.init_configs: |
-          [
-            {
-            }
-          ]
-        ad.datadoghq.com/vh-web-docs.instances: |
-          [
-            {
-              "host":"%%host%%", 
-              "port":"%%port%%"
-            }
-          ]
-        ad.datadoghq.com/vh-web-docs.logs: |
-          [
-            {
-              "source":"vh-web-docs",
-              "service":"vh-web-docs"
-            }
-          ]
       labels:
+        kube-monkey/enabled: enabled
+        kube-monkey/identifier: vh-web-docs
         app: vh-web-docs
       name: vh-web-docs
     spec:
