@@ -46,6 +46,14 @@ ___
 | lastAccessTime | The last time the resource was accessed. Either reading or writing are considered accesses | _string_ |        | ✔           |
 | lastWriteTime  | The last time the resource was written                                                     | _string_ |        | ✔           |
 
+## 400
+
+See [Error's response page](errors.md)
+
+##### Examples
+
+Example of "innererror":
+
 ## __Example Requests__
 
 ```cURL tab="cURL"

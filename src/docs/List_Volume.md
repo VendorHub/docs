@@ -21,6 +21,12 @@
 | name            | The name of the file or directory | _string_ | guid   | ✔           |
 | _array_[object] |                                   |          |        |             |
 
+## 400
+
+See [Error's response page](errors.md)
+
+##### Examples
+
 ## __Test Requests__
 
 ```cURL tab= 

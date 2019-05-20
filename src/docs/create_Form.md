@@ -14,11 +14,19 @@
 
 ### Schema
 
-| Property           | Description | Type          | Format | Is Required |
-| ------------------ | ----------- | ------------- | ------ | ----------- |
-| _Object_           |             |               |        |             |
-| name               |             | _string_      |        |             |
-| fields*            |             | array[object] |        |             |
+| Property | Description | Type          | Format | Is Required |
+| -------- | ----------- | ------------- | ------ | ----------- |
+| _Object_ |             |               |        |             |
+| name     |             | _string_      |        |             |
+| fields*  |             | array[object] |        |             |
+
+## 400
+
+See [Error's response page](errors.md)
+
+##### Examples
+
+Example of "innererror":
 
 ## __Test Requests__
 

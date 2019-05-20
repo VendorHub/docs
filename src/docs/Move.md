@@ -4,16 +4,16 @@
 
 ## Path Parameters
 
-   | Property | Description | Type     | Format | Is Required |
-   | -------- | ----------- | -------- | ------ | ----------- |
-   | tenantId |     The ID of the tenant        | _string_ | guid   | ✔           |
+   | Property | Description          | Type     | Format | Is Required |
+   | -------- | -------------------- | -------- | ------ | ----------- |
+   | tenantId | The ID of the tenant | _string_ | guid   | ✔           |
 
 ### Query Parameters
 
  | Property | Description | Type     | Format | Is Required |
- | -------- | ----------- | -------- | ------- | ----------- |
- | source   |             | _string_ |         | ✔           |
- | target   |             | _string_ |         | ✔           |
+ | -------- | ----------- | -------- | ------ | ----------- |
+ | source   |             | _string_ |        | ✔           |
+ | target   |             | _string_ |        | ✔           |
   ___
 
 ## __Responses__
@@ -25,6 +25,12 @@
 | Property | Description | Type | Format | Is Required |
 | -------- | ----------- | ---- | ------ | ----------- |
 | _object_ |             |      |        |             |
+
+## 400
+
+See [Error's response page](errors.md)
+
+##### Examples
 
 ## __Test Requests__
 

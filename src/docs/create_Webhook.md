@@ -4,10 +4,10 @@
 
 ### Path Parameters
 
-   | Property     | Description          | Type     | Format | Is Required |
-   | ------------ | -------------------- | -------- | ------ | ----------- |
-   | tenantId     | The ID of the tenant | _string_ | guid   | ✔           |
-   | FormId       |                      | _string_ | guid   | ✔           |
+   | Property | Description          | Type     | Format | Is Required |
+   | -------- | -------------------- | -------- | ------ | ----------- |
+   | tenantId | The ID of the tenant | _string_ | guid   | ✔           |
+   | FormId   |                      | _string_ | guid   | ✔           |
   
 ## __Responses__
 
@@ -15,9 +15,17 @@
 
 ### Schema
 
-| Property     | Description | Type          | Format | Is Required |
-| ------------ | ----------- | ------------- | ------ | ----------- |
-| _object_     |             |               |        |             |
+| Property | Description | Type | Format | Is Required |
+| -------- | ----------- | ---- | ------ | ----------- |
+| _object_ |             |      |        |             |
+
+## 400
+
+See [Error's response page](errors.md)
+
+##### Examples
+
+Example of "innererror":
 
 ## __Test Requests__
 

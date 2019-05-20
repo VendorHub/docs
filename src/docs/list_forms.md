@@ -14,24 +14,30 @@
 
 ### Schema
 
-| Property           | Description | Type          | Format | Is Required |
-| ------------------ | ----------- | ------------- | ------ | ----------- |
-| array [object]     |             |               |        |             |
-| formId             |             | _string_      | guid   | ✔           |
-| name               |             | _string_      |        |             |
-| fields*            |             |array[[Field](#field-schema)] |        |             |
-| submissionCount    |             | _integer_     |        |             |
-| submissionThisWeek |             | _integer_     |        |             |
-| submissionLastWeek |             | _integer_     |        |             |
-| createdOn          |             | _string_      | date   |             |
+| Property           | Description | Type                          | Format | Is Required |
+| ------------------ | ----------- | ----------------------------- | ------ | ----------- |
+| array [object]     |             |                               |        |             |
+| formId             |             | _string_                      | guid   | ✔           |
+| name               |             | _string_                      |        |             |
+| fields*            |             | array[[Field](#field-schema)] |        |             |
+| submissionCount    |             | _integer_                     |        |             |
+| submissionThisWeek |             | _integer_                     |        |             |
+| submissionLastWeek |             | _integer_                     |        |             |
+| createdOn          |             | _string_                      | date   |             |
 
 ##### Field schema
 
-| Property        | Relation | Type          | Format | Description |
-| --------------- | -------- | ------------- | ------ | ----------- |
-| __fields__      | __main__ | array[object] |        |             |
-| name            | Subset   | _string_      |        |             |
-| value           | Subset   | _string_      |        |             |
+| Property   | Relation | Type          | Format | Description |
+| ---------- | -------- | ------------- | ------ | ----------- |
+| __fields__ | __main__ | array[object] |        |             |
+| name       | Subset   | _string_      |        |             |
+| value      | Subset   | _string_      |        |             |
+
+## 400
+
+See [Error's response page](errors.md)
+
+##### Examples
 
 ## __Test Requests__
 

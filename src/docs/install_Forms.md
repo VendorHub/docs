@@ -14,9 +14,17 @@
 
 ### Schema
 
-| Property           | Description | Type          | Format | Is Required |
-| ------------------ | ----------- | ------------- | ------ | ----------- |
-| _Object_           |             |               |        |             |
+| Property | Description | Type | Format | Is Required |
+| -------- | ----------- | ---- | ------ | ----------- |
+| _Object_ |             |      |        |             |
+
+## 400
+
+See [Error's response page](errors.md)
+
+##### Examples
+
+Example of "innererror":
 
 ## __Test Requests__
 

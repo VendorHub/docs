@@ -51,6 +51,8 @@ nav:
             - 'List volume': 'list_Volume.md'
         - 'Directory Watchers':
             'list directory watchers': 'List_directory_watchers.md'
+        - 'Responses': 
+             'Errors': 'errors.md'
         
 extra:
   search:

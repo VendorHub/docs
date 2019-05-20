@@ -30,6 +30,14 @@
 | lastWriteTime  | The last time the resource was written                                                     | _string_  |        | ✔           |
 | hasChildren    |                                                                                            | _boolean_ |        | ✔           |
 
+## 400
+
+See [Error's response page](errors.md)
+
+##### Examples
+
+Example of "innererror":
+
 ## __Test Requests__
 
 ```cURL tab= 

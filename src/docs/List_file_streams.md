@@ -11,8 +11,8 @@
 ### Query Parameters
 
  | Property | Description                       | Type     | Format | Is Required |
- | -------- | --------------------------------- | -------- | ------- | ----------- |
- | Path     | The path to the file or directory | _string_ |         | ✔           |
+ | -------- | --------------------------------- | -------- | ------ | ----------- |
+ | Path     | The path to the file or directory | _string_ |        | ✔           |
 
 ## __Responses__
 
@@ -23,6 +23,12 @@
 | Property        | Description | Type | Format | Is Required |
 | --------------- | ----------- | ---- | ------ | ----------- |
 | _array_[string] |             |      |        |             |
+
+## 400
+
+See [Error's response page](errors.md)
+
+##### Examples
 
 ## __Test Requests__
 

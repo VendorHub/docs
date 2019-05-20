@@ -18,6 +18,14 @@
 |----------|-------------|------|--------|-------------|
 | _object_       |       |  |      |           |
 
+## 400
+
+See [Error's response page](errors.md)
+
+##### Examples
+
+Example of "innererror":
+
 ## __Test Requests__
 
 ```cURL tab= 

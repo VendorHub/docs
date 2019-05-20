@@ -19,6 +19,12 @@
 | -------- | ----------- | ---- | ------ | ----------- |
 | _Object_ |             |      |        |             |
 
+## 400
+
+See [Error's response page](errors.md)
+
+##### Examples
+
 ## __Test Requests__
 
 ```cURL tab= 

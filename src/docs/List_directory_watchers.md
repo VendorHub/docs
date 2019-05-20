@@ -4,9 +4,9 @@
 
 ### Path Parameters
 
-   | Property | Description | Type     | Format | Is Required |
-   | -------- | ----------- | -------- | ------ | ----------- |
-   | tenantId |       The ID of the tenant      | _string_ | guid   | ✔           |
+   | Property | Description          | Type     | Format | Is Required |
+   | -------- | -------------------- | -------- | ------ | ----------- |
+   | tenantId | The ID of the tenant | _string_ | guid   | ✔           |
 
 ## __Responses__
 
@@ -23,6 +23,12 @@
 | notifyFilter          |             | _integer_ |        |             |
 | monitorFilter         |             | _string_  |        |             |
 | notificationUri       |             | _string_  |        | ✔           |
+
+## 400
+
+See [Error's response page](errors.md)
+
+##### Examples
 
 ## __Test Requests__
 
