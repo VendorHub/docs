@@ -5,14 +5,14 @@ metadata:
   annotations:
     getambassador.io/config: |
       ---
-      apiVersion: ambassador/v0
+      apiVersion: ambassador/v1
       kind:  Mapping
       timeout_ms: 30000
       name:  vh-web-docs-map-#{KubernetesNamespace}#
       prefix: /_admin/#{KubernetesNamespace}#/vh-web-docs/
       service: vh-web-docs.#{KubernetesNamespace}#.svc.cluster.local
       ---
-      apiVersion: ambassador/v0
+      apiVersion: ambassador/v1
       kind:  Mapping
       timeout_ms: 30000
       name:  vh-web-docs-map-#{KubernetesNamespace}#-header
@@ -21,7 +21,7 @@ metadata:
         x-rxn-app: vh-web-docs-#{KubernetesNamespace}#
       service: vh-web-docs.#{KubernetesNamespace}#.svc.cluster.local
       ---
-      apiVersion: ambassador/v0
+      apiVersion: ambassador/v1
       kind:  Mapping
       timeout_ms: 30000
       name:  vh-web-docs-map-#{KubernetesNamespace}#-host
@@ -29,7 +29,7 @@ metadata:
       host: #{KubernetesHostname}#
       service: vh-web-docs.#{KubernetesNamespace}#.svc.cluster.local
       ---
-      apiVersion: ambassador/v0
+      apiVersion: ambassador/v1
       kind:  Mapping
       timeout_ms: 30000
       name:  vh-web-docs-map-trafficmanager-#{KubernetesNamespace}#-host
@@ -37,7 +37,7 @@ metadata:
       host: #{TrafficManagerHostname}#
       service: vh-web-docs.#{KubernetesNamespace}#.svc.cluster.local
       ---
-      apiVersion: ambassador/v0
+      apiVersion: ambassador/v1
       kind:  Mapping
       timeout_ms: 30000
       name:  vh-web-docs-map-publichost-#{KubernetesNamespace}#-host
