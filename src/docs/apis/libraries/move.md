@@ -1,7 +1,5 @@
 # **POST**   /libraries/{libraryId}/cmd/move
 
-Search within a library for directories or files with a query and an optional filter.
-
 ## Request
 
 ### Query Parameters
