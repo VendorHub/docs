@@ -4,11 +4,11 @@
 
 ### Path Parameters
 
-   | Property     | Description          | Type     | Format | Is Required |
+   | Property     | Description          | Type     | Format | Required |
    | ------------ | -------------------- | -------- | ------ | ----------- |
-   | tenantId     | The ID of the tenant | _string_ | guid   | ✔           |
-   | FormId       |                      | _string_ | guid   | ✔           |
-   | submissionId |                      | _string_ | guid   | ✔           |
+   | tenantId     | The ID of the tenant | _string_ | uuid   | ✔           |
+   | FormId       |                      | _string_ | uuid   | ✔           |
+   | submissionId |                      | _string_ | uuid   | ✔           |
    | attachmentName |                      | _string_ |    | ✔           |
 
 ## __Responses__
@@ -17,7 +17,7 @@
 
 ### Schema
 
-| Property     | Description | Type          | Format | Is Required |
+| Property     | Description | Type          | Format | Required |
 | ------------ | ----------- | ------------- | ------ | ----------- |
 | _object_     |             |               |        |             |
 

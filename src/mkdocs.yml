@@ -8,7 +8,7 @@ repo_url: https://github.com/VendorHub/docs/
 edit_uri: "blob/master/src/docs/"
 
 # Copyright
-copyright: 'Copyright &copy; 2019 Rixian LLC'
+copyright: 'Copyright &copy; 2020 Rixian LLC'
 
 theme:
   name: 'material'
@@ -20,8 +20,18 @@ theme:
 
 nav:
     - Home: index.md
+    - Forms: forms/overview.md
+    - 'Document Library': libraries/overview.md
     - 'Api Reference':
         - Overview: Overview.md
+        - Paths in VendorHub: apis/paths.md
+        - 'Document Library': 
+            - 'List Libraries': apis/libraries/list_libraries.md
+            - 'Create Library': apis/libraries/create_library.md
+            - 'Get Library': apis/libraries/get_library.md
+            - 'Search': apis/libraries/search_library.md
+            - 'Download': apis/libraries/download.md
+            - 'Get Info': apis/libraries/get_item.md
         - 'Operations':
             - Copy: 'copy.md'
             - Create: 'create.md'
@@ -52,13 +62,16 @@ nav:
         - 'Directory Watchers':
             'list directory watchers': 'List_directory_watchers.md'
         - 'Responses': 
-             'Errors': 'errors.md'
+             'Errors': apis/errors.md
         
 extra:
   search:
     language: 'en'
-
+extra_css:
+  - 'stylesheets/extra.css'
 markdown_extensions:
+  - markdown_include.include:
+      base_path: docs
   - admonition
   - codehilite:
       guess_lang: false

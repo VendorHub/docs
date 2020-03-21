@@ -4,13 +4,13 @@
 
 ### Path Parameters
 
-   | Property | Description                       | Type     | Format | Is Required |
+   | Property | Description                       | Type     | Format | Required |
    | -------- | --------------------------------- | -------- | ------ | ----------- |
-   | tenantId | The path to the file or directory | _string_ | guid   | ✔           |
+   | tenantId | The path to the file or directory | _string_ | uuid   | ✔           |
 
 ### 1 Query Parameter
 
- | Property | Description                       | Type     | Format | Is Required |
+ | Property | Description                       | Type     | Format | Required |
  | -------- | --------------------------------- | -------- | ------ | ----------- |
  | Path     | The path to the file or directory | _string_ |        | ✔           |
 
@@ -23,13 +23,13 @@
 ### Schema
 
 
-| Property        | Description                                                                                | Type     | Format | Is Required |
+| Property        | Description                                                                                | Type     | Format | Required |
 | --------------- | ------------------------------------------------------------------------------------------ | -------- | ------ | ----------- |
-| id              | The ID of the file or directory                                                            | _string_ | guid   | ✔           |
-| parentid        | **The** ID of the parent directory                                                         | _string_ | guid   | ✔           |
-| tenantId        | The ID of the tenant                                                                       | _string_ | guid   | ✔           |
-| volumeId        | The ID of the volume                                                                       | _string_ | guid   | ✔           |
-| partitionId     | The ID of the partition containing the file or directory                                   | _string_ | guid   | ✔           |
+| id              | The ID of the file or directory                                                            | _string_ | uuid   | ✔           |
+| parentid        | **The** ID of the parent directory                                                         | _string_ | uuid   | ✔           |
+| tenantId        | The ID of the tenant                                                                       | _string_ | uuid   | ✔           |
+| volumeId        | The ID of the volume                                                                       | _string_ | uuid   | ✔           |
+| partitionId     | The ID of the partition containing the file or directory                                   | _string_ | uuid   | ✔           |
 | name            | The name of the file or directory                                                          | _string_ |        | ✔           |
 | fullPath        | The full path of the file or directory                                                     | _string_ |        | ✔           |
 | attributes      |                                                                                            | _string_ |        | ✔           |

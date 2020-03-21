@@ -4,11 +4,11 @@
 
 ### Path Parameters
 
-   | Property     | Description          | Type     | Format | Is Required |
+   | Property     | Description          | Type     | Format | Required |
    | ------------ | -------------------- | -------- | ------ | ----------- |
-   | tenantId     | The ID of the tenant | _string_ | guid   | ✔           |
-   | FormId       |                      | _string_ | guid   | ✔           |
-   | submissionId |                      | _string_ | guid   | ✔           |
+   | tenantId     | The ID of the tenant | _string_ | uuid   | ✔           |
+   | FormId       |                      | _string_ | uuid   | ✔           |
+   | submissionId |                      | _string_ | uuid   | ✔           |
 
 ## __Responses__
 
@@ -16,11 +16,11 @@
 
 ### Schema
 
-| Property     | Description | Type          | Format | Is Required |
+| Property     | Description | Type          | Format | Required |
 | ------------ | ----------- | ------------- | ------ | ----------- |
 | _object_     |             |               |        |             |
-| formId       |             | _string_      | guid   |             |
-| submissionId |             | _string_      | guid   |             |
+| formId       |             | _string_      | uuid   |             |
+| submissionId |             | _string_      | uuid   |             |
 | submittedOn  |             | _string_      |        |             |
 | fields*      |             | array[[Field](#field-schema)] |        |             |
 | attachments* |             | array[[attachment](#attachment-schema)] |        |             |

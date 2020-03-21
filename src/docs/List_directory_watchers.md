@@ -4,9 +4,9 @@
 
 ### Path Parameters
 
-   | Property | Description          | Type     | Format | Is Required |
+   | Property | Description          | Type     | Format | Required |
    | -------- | -------------------- | -------- | ------ | ----------- |
-   | tenantId | The ID of the tenant | _string_ | guid   | ✔           |
+   | tenantId | The ID of the tenant | _string_ | uuid   | ✔           |
 
 ## __Responses__
 
@@ -14,11 +14,11 @@
 
 ### Schema
 
-| Property              | Description | Type      | Format | Is Required |
+| Property              | Description | Type      | Format | Required |
 | --------------------- | ----------- | --------- | ------ | ----------- |
 | _object_              |             |           |        |             |
-| directoryWatcherId    |             | _string_  | guid   | ✔           |
-| directoryId           |             | _string_  | guid   | ✔           |
+| directoryWatcherId    |             | _string_  | uuid   | ✔           |
+| directoryId           |             | _string_  | uuid   | ✔           |
 | includeSubdirectories |             | _boolean_ |        |             |
 | notifyFilter          |             | _integer_ |        |             |
 | monitorFilter         |             | _string_  |        |             |
