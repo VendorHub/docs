@@ -1,0 +1,1 @@
+| `path` | _string_ | | ✔ | The path to a file. Formatting details: [Paths](../paths.md) |

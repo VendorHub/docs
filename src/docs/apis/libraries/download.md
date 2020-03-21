@@ -1,19 +1,19 @@
 # **GET**   /libraries/{libraryId}/cmd/download
 
-## Request Parameters
+## Request
 
 ### Query Parameters
 
- | Property | Description                                                         | Type     | Format | Required |
- | -------- | ------------------------------------------------------------------- | -------- | ------ | -------- |
- | path     | The path to a file. Formatting details: [Paths](../paths.md)        | _string_ |        | ✔        |
- | tenantId | The tenant identifier. Assumes the default tenant if not specified. | _string_ | _uuid_ |          |
+| Name | Type | Format | Required | Description |
+| ---- | ---- | ------ | -------- | ----------- |
+{!_partials/schemas/path_param.md!}
+{!_partials/schemas/tenantId_param.md!}
 
 ### Path Parameters
 
-| Property  | Description           | Type     | Format | Required |
-| --------- | --------------------- | -------- | ------ | -------- |
-| libraryId | The ID of the library | _string_ | uuid   | ✔        |
+| Name | Type | Format | Required | Description |
+| ---- | ---- | ------ | -------- | ----------- |
+{!_partials/schemas/libraryId_param.md!}
 
 ## Responses
 
@@ -23,14 +23,14 @@ The response content body contains the file bytes directly.
 
 ### HTTP 400
 
-See [Error's response page](../../errors.md)
+{!_partials/schemas/error.md!}
 
 ## Examples
 
 ### Requests
 
 !!! note
-    Authentication is not shown in these examples.
+    Authentication is not shown in these examples. For details refer to the [Authentication](../auth.md) page.
 
 ```cURL tab=
 curl --location --request GET 'https://api.vendorhub.io/libraries/d31d18d9-43d6-4ab5-a10a-bd39402c1fb2/cmd/download?api-version=2019-09-01&path=/test.txt'

@@ -1,0 +1,1 @@
+| libraryId | _string_ | uuid   | ✔ | The ID of the library |

@@ -24,6 +24,7 @@ nav:
     - 'Document Library': libraries/overview.md
     - 'Api Reference':
         - Overview: Overview.md
+        - Authentication: apis/auth.md
         - Paths in VendorHub: apis/paths.md
         - 'Document Library': 
             - 'List Libraries': apis/libraries/list_libraries.md
@@ -32,43 +33,55 @@ nav:
             - 'Search': apis/libraries/search_library.md
             - 'Download': apis/libraries/download.md
             - 'Get Info': apis/libraries/get_item.md
-        - 'Operations':
-            - Copy: 'copy.md'
-            - Create: 'create.md'
-            - Delete: 'delete.md'
-            - 'List children': 'list_Children.md'
-            - Download: 'download.md'
-            - Exist: 'exists.md'
-            - 'Get info': 'get_info.md'
-            - 'Get installation folder': 'get_installation_folder.md'
-            - Move: 'move.md'
-            - 'List file streams': 'list_file_streams.md'
-        - 'Forms':
-            - 'List Forms' : 'list_forms.md'
-            - 'Create Form' : 'create_Form.md'
-            - 'install Forms' : 'install_Forms.md'
-            - 'Get Form' : 'get_Form.md'
-            - 'Submit Form' : 'submit_Form.md'
-            - 'Get Submission' : 'get_Submission.md'
-            - 'Get Sumbission Attachment' : 'get_Submission_Attachment.md'
-            - 'List Webhooks' : 'list_Webhooks.md'
-            - 'Create Webhook' : 'create_Webhook.md'
-        - 'Marketplace':
-            - 'List of available apps': 'list_of_available_apps.md'
-        - 'System':
-            - 'Initial setup': 'initial_setup.md'
-            - 'Create volume': 'create_Volume.md'
-            - 'List volume': 'list_Volume.md'
-        - 'Directory Watchers':
-            'list directory watchers': 'List_directory_watchers.md'
-        - 'Responses': 
-             'Errors': apis/errors.md
+            - 'Delete': apis/libraries/delete_item.md
+            - 'List Children': apis/libraries/list_children.md
+            - 'Exists': apis/libraries/exists.md
+            - 'Copy': apis/libraries/copy.md
+            - 'Move': apis/libraries/move.md            
+            - 'List Tags': apis/libraries/list_file_tags.md
+            - 'Upsert Tags': apis/libraries/upsert_file_tags.md
+            - 'Clear Tags': apis/libraries/clear_file_tags.md
+            - 'Remove Tag': apis/libraries/remove_file_tag.md
+        #- 'Operations':
+        #    - Copy: 'copy.md'
+        #    - Create: 'create.md'
+        #    - Delete: 'delete.md'
+        #    - 'List children': 'list_Children.md'
+        #    - Download: 'download.md'
+        #    - Exist: 'exists.md'
+        #    - 'Get info': 'get_info.md'
+        #    - 'Get installation folder': 'get_installation_folder.md'
+        #    - Move: 'move.md'
+        #    - 'List file streams': 'list_file_streams.md'
+        #- 'Forms':
+        #    - 'List Forms' : 'list_forms.md'
+        #    - 'Create Form' : 'create_Form.md'
+        #    - 'install Forms' : 'install_Forms.md'
+        #    - 'Get Form' : 'get_Form.md'
+        #    - 'Submit Form' : 'submit_Form.md'
+        #    - 'Get Submission' : 'get_Submission.md'
+        #    - 'Get Sumbission Attachment' : 'get_Submission_Attachment.md'
+        #    - 'List Webhooks' : 'list_Webhooks.md'
+        #    - 'Create Webhook' : 'create_Webhook.md'
+        #- 'Marketplace':
+        #    - 'List of available apps': 'list_of_available_apps.md'
+        #- 'System':
+        #    - 'Initial setup': 'initial_setup.md'
+        #    - 'Create volume': 'create_Volume.md'
+        #    - 'List volume': 'list_Volume.md'
+        #- 'Directory Watchers':
+        #    'list directory watchers': 'List_directory_watchers.md'
+        #- 'Responses': 
+        #     'Errors': apis/errors.md
         
 extra:
   search:
     language: 'en'
 extra_css:
   - 'stylesheets/extra.css'
+extra_javascript:
+  - 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'
+  - 'javascript/extra.js'
 markdown_extensions:
   - markdown_include.include:
       base_path: docs

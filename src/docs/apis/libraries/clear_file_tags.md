@@ -1,6 +1,6 @@
-# **GET**   /libraries/{libraryId}/cmd/info
+# **POST**   /libraries/{libraryId}/cmd/clear-tags
 
-Gets details about the specified item.
+Search within a library for directories or files with a query and an optional filter.
 
 ## Request
 
@@ -19,11 +19,9 @@ Gets details about the specified item.
 
 ## Responses
 
-### HTTP 200
+### HTTP 204
 
-#### Response Schema
-
-{!_partials/schemas/drive_item_info.md!}
+Successfully cleared the tags.
 
 ### HTTP 400
 
@@ -37,27 +35,17 @@ Gets details about the specified item.
     Authentication is not shown in these examples. For details refer to the [Authentication](../auth.md) page.
 
 ```cURL tab=
-curl --location --request GET 'https://api.vendorhub.io/libraries/d31d18d9-43d6-4ab5-a10a-bd39402c1fb2/cmd/info?path=/test.txt&api-version=2019-09-01' \
---header 'Content-Type: application/json' \
---data-raw '{
-    "name": "Main Library",
-    "location": "C:/MainLibrary",
-    "enableSearch": true
-}'
+curl --location --request POST 'https://api.vendorhub.io/libraries/d31d18d9-43d6-4ab5-a10a-bd39402c1fb2/cmd/clear-tags?path=/test.txt&api-version=2019-09-01'
 ```
 
 ```C# tab=
 IDocumentLibraryClient client = ...;
 Guid libraryId = Guid.Parse("d31d18d9-43d6-4ab5-a10a-bd39402c1fb2");
-LibraryItemInfo itemInfo = await client.GetItemInfoAsync(libraryId, "/test.txt");
+await client.ClearFileTagsAsync(libraryId, "/test.txt");
 ```
 
 ```C# tab='C# (Raw)'
 HttpClient httpClient = new HttpClient();
-string url = "https://api.vendorhub.io/libraries/d31d18d9-43d6-4ab5-a10a-bd39402c1fb2/cmd/info?path=/test.txt&api-version=2019-09-01";
-HttpResponseMessage response = await httpClient.GetAsync(url);
+string url = "https://api.vendorhub.io/libraries/d31d18d9-43d6-4ab5-a10a-bd39402c1fb2/cmd/clear-tags?/test.txt&api-version=2019-09-01";
+HttpResponseMessage response = await httpClient.PostAsync(url, new StringContent(string.Empty));
 ```
-
-### Response
-
-TODO

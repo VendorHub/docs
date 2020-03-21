@@ -1,43 +1,43 @@
 # **GET**   /libraries/{libraryId}
 
-## __Request Parameters__
+## Request
 
 ### Query Parameters
 
-| Property | Description                                                         | Type     | Format | Required |
-| -------- | ------------------------------------------------------------------- | -------- | ------ | ----------- |
-| tenantId | The tenant identifier. Assumes the default tenant if not specified. | _string_ | _uuid_ |             |
+| Name | Type | Format | Required | Description |
+| ---- | ---- | ------ | -------- | ----------- |
+{!_partials/schemas/tenantId_param.md!}
 
 ### Path Parameters
 
-| Property  | Description           | Type     | Format | Required |
-| --------- | --------------------- | -------- | ------ | ----------- |
-| libraryId | The ID of the library | _string_ | uuid   | ✔           |
+| Name | Type | Format | Required | Description |
+| ---- | ---- | ------ | -------- | ----------- |
+{!_partials/schemas/libraryId_param.md!}
 
-## __Responses__
+## Responses
 
-### __200__
+### HTTP 200
 
-### Schema
+#### Response Schema
 
-| Property  | Description | Type     | Format | Required |
-| --------- | ----------- | -------- | ------ | ----------- |
-| libraryId |             | _string_ | _uuid_ | ✔           |
-| tenantId  |             | _string_ | _uuid_ | ✔           |
-| name      |             | _string_ |        | ✔           |
-| location  |             | _string_ |        | ✔           |
-| createdOn |             | _string_ | date   | ✔           |
+| Name      | Type     | Format | Required | Description |
+| --------- | -------- | ------ | -------- | ----------- |
+| libraryId | _string_ | _uuid_ | ✔        |             |
+| tenantId  | _string_ | _uuid_ | ✔        |             |
+| name      | _string_ |        | ✔        |             |
+| location  | _string_ |        | ✔        |             |
+| createdOn | _string_ | date   | ✔        |             |
 
-## 400
+### HTTP 400
 
-See [Error's response page](../../errors.md)
+{!_partials/schemas/error.md!}
 
 ## Examples
 
-### __Requests__
+### Requests
 
 !!! note
-    Authentication is not shown in these examples.
+    Authentication is not shown in these examples. For details refer to the [Authentication](../auth.md) page.
 
 ```cURL tab=
 curl --location --request POST 'https://api.vendorhub.io/libraries/d31d18d9-43d6-4ab5-a10a-bd39402c1fb2?api-version=2019-09-01' \
@@ -61,7 +61,7 @@ string url = "https://api.vendorhub.io/libraries/d31d18d9-43d6-4ab5-a10a-bd39402
 HttpResponseMessage response = await httpClient.GetAsync(url);
 ```
 
-### __Response__
+### Response
 
 ```json
 {

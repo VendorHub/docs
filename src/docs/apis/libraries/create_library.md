@@ -1,47 +1,47 @@
 # **POST**   /libraries
 
-## __Request Parameters__
+## Request
 
-### 1 Query Parameters
+### Query Parameters
 
- | Property | Description                                                         | Type     | Format | Required |
- | -------- | ------------------------------------------------------------------- | -------- | ------ | ----------- |
- | tenantId | The tenant identifier. Assumes the default tenant if not specified. | _string_ | _uuid_ |             |
+| Name | Type | Format | Required | Description |
+| ---- | ---- | ------ | -------- | ----------- |
+{!_partials/schemas/tenantId_param.md!}
 
-### 2 Body
+### Body
 
 The following body should be submitted as JSON, i.e. with the `Content-Type` header set to `application/json`.
 
- | Property     | Description                                                                  | Type      | Format | Required |
- | ------------ | ---------------------------------------------------------------------------- | --------- | ------ | ----------- |
- | name         | The name of the library.                                                     | _string_  |        | ✔           |
- | location     | The location of the library in your Rixian Drive account.                    | _string_  |        |             |
- | enableSearch | Enables searching within this library if set to `true`. Defaults to `false`. | _boolean_ |        |             |
+| Name           | Type      | Format | Required | Description                                                                  |
+| -------------- | --------- | ------ | -------- | ---------------------------------------------------------------------------- |
+| `name`         | _string_  |        | ✔        | The name of the library.                                                     |
+| `location`     | _string_  |        |          | The location of the library in your Rixian Drive account.                    |
+| `enableSearch` | _boolean_ |        |          | Enables searching within this library if set to `true`. Defaults to `false`. |
 
-## __Responses__
+## Responses
 
-### __200__
+### HTTP 200
 
-### Schema
+#### Response Schema
 
-| Property  | Description | Type     | Format | Required |
-| --------- | ----------- | -------- | ------ | ----------- |
-| libraryId |             | _string_ | _uuid_ | ✔           |
-| tenantId  |             | _string_ | _uuid_ | ✔           |
-| name      |             | _string_ |        | ✔           |
-| location  |             | _string_ |        | ✔           |
-| createdOn |             | _string_ | date   | ✔           |
+| Name        | Type     | Format | Required | Description |
+| ----------- | -------- | ------ | -------- | ----------- |
+| `libraryId` | _string_ | _uuid_ | ✔        |             |
+| `tenantId`  | _string_ | _uuid_ | ✔        |             |
+| `name`      | _string_ |        | ✔        |             |
+| `location`  | _string_ |        | ✔        |             |
+| `createdOn` | _string_ | date   | ✔        |             |
 
-## 400
+### HTTP 400
 
-See [Error's response page](../../errors.md)
+{!_partials/schemas/error.md!}
 
 ## Examples
 
-### __Requests__
+### Requests
 
 !!! note
-    Authentication is not shown in these examples.
+    Authentication is not shown in these examples. For details refer to the [Authentication](../auth.md) page.
 
 ```cURL tab=
 curl --location --request POST 'https://api.vendorhub.io/libraries?api-version=2019-09-01' \
@@ -75,7 +75,7 @@ string json = JsonConvert.SerializeObject(new
 HttpResponseMessage response = await httpClient.PostAsync(url, new StringContent(json, Encoding.UTF8, MediaTypeNames.Application.Json));
 ```
 
-### __Response__
+### Response
 
 ```json
 {
