@@ -21,17 +21,6 @@ jobs:
         value: " " # Default value
       - group: SonarCloud
     steps:
-      #
-      # This shell script generates some extra flags for SonarCloud with information about the PR.
-      # The regex removes the refs/heads/ prefix to the branch names which are incompatible with SonarCloud
-      - bash: |
-          message="##vso[task.setvariable variable=SonarCloudPROptions;]/d:sonar.pullrequest.branch=$(System.PullRequest.SourceBranch) /d:sonar.pullrequest.key=$(System.PullRequest.PullRequestId) /d:sonar.pullrequest.base=$(System.PullRequest.TargetBranch)"
-          echo "${message//refs\/heads\//}"
-        condition: and(succeeded(), eq(variables['Build.Reason'], 'PullRequest'))
-
-      - task: gittools.gitversion.gitversion-task.GitVersion@4
-        displayName: GitVersion
-
       - task: qetza.replacetokens.replacetokens-task.replacetokens@3
         displayName: "Replace tokens in Dockerfile"
         inputs:
