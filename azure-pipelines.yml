@@ -1,12 +1,13 @@
 resources:
   - repo: self
 trigger: ["*"]
-phases:
-  - phase: DockerPhase
+jobs:
+  - job: DockerPhase
     displayName: Docker
     condition: succeeded()
-    queue:
-      name: RXN-LINUX
+    pool: 
+      name: Azure Pipelines
+      vmImage: ubuntu-16.04
     variables:
       - name: ContainerImageName
         value: "vh-web-docs"
