@@ -1,6 +1,6 @@
 # **POST**   /libraries/{libraryId}/cmd/copy
 
-Search within a library for directories or files with a query and an optional filter.
+TODO
 
 ## Request
 
