@@ -22,7 +22,7 @@ Search within a library for directories or files with a query and an optional fi
 
 ### HTTP 204
 
-Successfully upserted tags.
+Successfully copied the file or directory.
 
 ### HTTP 400
 
