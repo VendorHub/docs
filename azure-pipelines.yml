@@ -1,6 +1,11 @@
 resources:
   - repo: self
-trigger: ["*"]
+trigger: 
+  branches:
+    include:
+    - master
+    - validate/*
+    - release/*
 jobs:
   - job: DockerPhase
     displayName: Docker
