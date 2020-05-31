@@ -7,7 +7,7 @@ jobs:
     condition: succeeded()
     pool: 
       name: Azure Pipelines
-      vmImage: ubuntu-16.04
+      vmImage: ubuntu-latest
     variables:
       - name: ContainerImageName
         value: "vh-web-docs"
@@ -15,18 +15,9 @@ jobs:
         value: "vhprodacr.azurecr.io"
       - name: ContainerTag
         value: $(Build.SourceVersion)
-      - name: SonarCloudPROptions
-        value: " " #Default value for when not building a PR
       - name: DockerBuildArgs
         value: " " # Default value
-      - group: SonarCloud
     steps:
-      - task: qetza.replacetokens.replacetokens-task.replacetokens@3
-        displayName: "Replace tokens in Dockerfile"
-        inputs:
-          targetFiles: "**/Dockerfile"
-          keepToken: true
-
       - task: Docker@1
         displayName: "Build an image"
         inputs:
