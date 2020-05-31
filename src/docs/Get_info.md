@@ -56,21 +56,21 @@ Example of "innererror":
 
 ## __Example Requests__
 
-```cURL tab="cURL"
+```bash
 curl -X GET \
   'https://api.vendorhub.dev/tenants/f88e77a3-287b-4556-a41e-3a70d403a45f/cmd/info?path=C:/test.png'
 ```
 
-```c# tab="C#"
+```csharp
 Example2
 ```
 
 ## __Example Responses__
 
-```cURL tab="cURL"
+```bash
 Example1
 ```
 
-```C# tab="C#"
+```csharp
 Example2
 ```

@@ -8,14 +8,14 @@ Search within a library for directories or files with a query and an optional fi
 
 | Name | Type | Format | Required | Description |
 | ---- | ---- | ------ | -------- | ----------- |
-{!_partials/schemas/path_param.md!}
-{!_partials/schemas/tenantId_param.md!}
+--8<-- "_partials/schemas/path_param.md"
+--8<-- "_partials/schemas/tenantId_param.md"
 
 ### Path Parameters
 
 | Name | Type | Format | Required | Description |
 | ---- | ---- | ------ | -------- | ----------- |
-{!_partials/schemas/libraryId_param.md!}
+--8<-- "_partials/schemas/libraryId_param.md"
 
 ### Body
 
@@ -29,7 +29,7 @@ Successfully upserted tags.
 
 ### HTTP 400
 
-{!_partials/schemas/error.md!}
+--8<-- "_partials/schemas/error.md"
 
 ## Examples
 
@@ -38,38 +38,44 @@ Successfully upserted tags.
 !!! note
     Authentication is not shown in these examples. For details refer to the [Authentication](../auth.md) page.
 
-```cURL tab=
-curl --location --request POST 'https://api.vendorhub.io/libraries/d31d18d9-43d6-4ab5-a10a-bd39402c1fb2/cmd/upsert-tags?path=/test.txt&api-version=2019-09-01' \
---header 'Content-Type: application/json' \
---data-raw '{
-    "tagA": "111",
-    "tagB": "XYZ",
-}'
-```
+=== "cURL"
 
-```C# tab=
-IDocumentLibraryClient client = ...;
-Guid libraryId = Guid.Parse("d31d18d9-43d6-4ab5-a10a-bd39402c1fb2");
-await client.UpsertFileTagsAsync(libraryId, "/test.txt", new UpsertFileTagsRequest
-{
-    Tags = new Dictionary<string, string>
-    {
-        ["tagA"] = "111",
-        ["tagB"] = "XYZ",
-    }
-});
-```
+    ```bash
+    curl --location --request POST 'https://api.vendorhub.io/libraries/d31d18d9-43d6-4ab5-a10a-bd39402c1fb2/cmd/upsert-tags?path=/test.txt&api-version=2019-09-01' \
+    --header 'Content-Type: application/json' \
+    --data-raw '{
+        "tagA": "111",
+        "tagB": "XYZ",
+    }'
+    ```
 
-```C# tab='C# (Raw)'
-HttpClient httpClient = new HttpClient();
-string url = "https://api.vendorhub.io/libraries/d31d18d9-43d6-4ab5-a10a-bd39402c1fb2/cmd/upsert-tags?/test.txt&api-version=2019-09-01";
-string json = JsonConvert.SerializeObject(new
-{
-    tags = new Dictionary<string, string>
+=== "C#"
+
+    ```csharp
+    IDocumentLibraryClient client = ...;
+    Guid libraryId = Guid.Parse("d31d18d9-43d6-4ab5-a10a-bd39402c1fb2");
+    await client.UpsertFileTagsAsync(libraryId, "/test.txt", new UpsertFileTagsRequest
     {
-        ["tagA"] = "111",
-        ["tagB"] = "XYZ",
-    }
-});
-HttpResponseMessage response = await httpClient.PostAsync(url, new StringContent(json, Encoding.UTF8, MediaTypeNames.Application.Json));
-```
+        Tags = new Dictionary<string, string>
+        {
+            ["tagA"] = "111",
+            ["tagB"] = "XYZ",
+        }
+    });
+    ```
+
+=== "C# (Raw)"
+
+    ```csharp
+    HttpClient httpClient = new HttpClient();
+    string url = "https://api.vendorhub.io/libraries/d31d18d9-43d6-4ab5-a10a-bd39402c1fb2/cmd/upsert-tags?/test.txt&api-version=2019-09-01";
+    string json = JsonConvert.SerializeObject(new
+    {
+        tags = new Dictionary<string, string>
+        {
+            ["tagA"] = "111",
+            ["tagB"] = "XYZ",
+        }
+    });
+    HttpResponseMessage response = await httpClient.PostAsync(url, new StringContent(json, Encoding.UTF8, MediaTypeNames.Application.Json));
+    ```

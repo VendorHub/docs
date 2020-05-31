@@ -1,3 +1,33 @@
 hr {
     border-bottom-style: solid !important
 }
+
+:root {
+
+    /* Default color shades */
+    --md-default-fg-color:               #000000;
+    --md-default-fg-color--light:        #4D4D4D;
+    --md-default-fg-color--lighter:      #595959;
+    --md-default-fg-color--lightest:     #999999;
+    /* --md-default-bg-color:               #D9D9D9; */
+    /* --md-default-bg-color--light:        #FF0000;
+    --md-default-bg-color--lighter:      #FF0000;
+    --md-default-bg-color--lightest:     #FF0000; */
+
+    /* Primary color shades */
+    --md-primary-fg-color:               #009FE3;
+    --md-primary-fg-color--light:        #19BAFF;
+    --md-primary-fg-color--dark:         #006996;
+    /* --md-primary-bg-color:               #FF0000;
+    --md-primary-bg-color--light:        #FF0000; */
+  
+    /* Accent color shades */
+    --md-accent-fg-color:                #E37A00;
+    --md-accent-fg-color--transparent:   #965100;
+    /* --md-accent-bg-color:                ...;
+    --md-accent-bg-color--light:         ...; */
+  
+    /* Code block color shades */
+    /* --md-code-bg-color:                  ...;
+    --md-code-fg-color:                  ...; */
+  }

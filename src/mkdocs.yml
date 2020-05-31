@@ -3,29 +3,45 @@ site_url: https://www.vendorhub.io
 site_description: Project documentation with Markdown.
 site_author: VendorHub Team
 
-repo_name: 'vendorhub/docs'
-repo_url: https://github.com/VendorHub/docs/
+repo_name: 'rixian/vh-docs'
+repo_url: https://github.com/rixian/vh-docs/
 edit_uri: "blob/master/src/docs/"
 
 # Copyright
-copyright: 'Copyright &copy; 2020 Rixian LLC'
+copyright: 'Copyright &copy; Rixian LLC'
 
 theme:
   name: 'material'
-  logo: 'images/logo.png'
+  logo: 'images/logo_white.png'
   favicon: 'images/favicon.ico'
   palette:
-    primary: 'light blue'
-    accent: 'light blue'
+    scheme: default # slate
+  features:
+    - tabs
 
 nav:
     - Home: index.md
-    - Forms: forms/overview.md
-    - 'Document Library': libraries/overview.md
+    - Forms: 
+        - Overview: forms/overview.md
+    - 'Document Library': 
+        - Overview: libraries/overview.md
+        - Features: 
+            - 'Summary': libraries/features.md
+            - 'Multi Tenant': libraries/multi_tenant.md
+            - 'Bring-Your-Own-Storage': libraries/byos.md
+            - 'Indexing': libraries/indexing.md
+            - 'SFTP Server': libraries/sftp_server.md
+            - 'Anti-Virus Scanning': libraries/anti_virus.md
+            - 'Tagging': libraries/tagging.md
+            - 'Searching': libraries/searching.md
+            - 'Alternate Streams': libraries/alternate_streams.md
+            - 'Dashboard': libraries/dashboard.md
     - 'Api Reference':
         - Overview: Overview.md
         - Authentication: apis/auth.md
         - Paths in VendorHub: apis/paths.md
+        - 'Forms': 
+            - 'List Forms': apis/forms/list_forms.md
         - 'Document Library': 
             - 'List Libraries': apis/libraries/list_libraries.md
             - 'Create Library': apis/libraries/create_library.md
@@ -73,7 +89,11 @@ nav:
         #    'list directory watchers': 'List_directory_watchers.md'
         #- 'Responses': 
         #     'Errors': apis/errors.md
-        
+
+plugins:
+  - search:
+      lang:
+        - en
 extra:
   search:
     language: 'en'
@@ -83,23 +103,37 @@ extra_javascript:
   - 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'
   - 'javascript/extra.js'
 markdown_extensions:
-  - markdown_include.include:
-      base_path: docs
   - admonition
-  - codehilite:
-      guess_lang: false
+  - codehilite
+  - footnotes
+  - meta
   - toc:
       permalink: true
+      separator: "_"
+  - pymdownx.arithmatex
   - pymdownx.betterem:
       smart_enable: all
   - pymdownx.caret
   - pymdownx.critic
   - pymdownx.details
+  #- pymdownx.md_in_html
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+      options:
+        custom_icons:
+          - docs/icons
+  - pymdownx.highlight:
+      linenums: true
   - pymdownx.inlinehilite
   - pymdownx.magiclink
   - pymdownx.mark
   - pymdownx.smartsymbols
+  - pymdownx.snippets:
+      check_paths: true
+      base_path: docs
   - pymdownx.superfences
   - pymdownx.tasklist:
       custom_checkbox: true
+  - pymdownx.tabbed
   - pymdownx.tilde

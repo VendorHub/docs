@@ -6,7 +6,7 @@
 
 | Name | Type | Format | Required | Description |
 | ---- | ---- | ------ | -------- | ----------- |
-{!_partials/schemas/tenantId_param.md!}
+--8<-- "_partials/schemas/tenantId_param.md"
 
 ### Body
 
@@ -34,7 +34,7 @@ The following body should be submitted as JSON, i.e. with the `Content-Type` hea
 
 ### HTTP 400
 
-{!_partials/schemas/error.md!}
+--8<-- "_partials/schemas/error.md"
 
 ## Examples
 
@@ -43,37 +43,43 @@ The following body should be submitted as JSON, i.e. with the `Content-Type` hea
 !!! note
     Authentication is not shown in these examples. For details refer to the [Authentication](../auth.md) page.
 
-```cURL tab=
-curl --location --request POST 'https://api.vendorhub.io/libraries?api-version=2019-09-01' \
---header 'Content-Type: application/json' \
---data-raw '{
-    "name": "Main Library",
-    "location": "C:/MainLibrary",
-    "enableSearch": true
-}'
-```
+=== "cURL"
 
-```C# tab=
-IDocumentLibraryClient client = ...;
-Library library = await client.CreateLibraryAsync(new CreateLibraryRequest
-{
-    Name = "Main Library",
-    Location = "C:/MainLibrary",
-    EnableSearch = true,
-});
-```
+    ```bash
+    curl --location --request POST 'https://api.vendorhub.io/libraries?api-version=2019-09-01' \
+    --header 'Content-Type: application/json' \
+    --data-raw '{
+        "name": "Main Library",
+        "location": "C:/MainLibrary",
+        "enableSearch": true
+    }'
+    ```
 
-```C# tab='C# (Raw)'
-HttpClient httpClient = new HttpClient();
-string url = "https://api.vendorhub.io/libraries?api-version=2019-09-01";
-string json = JsonConvert.SerializeObject(new
-{
-    name = "Main Library",
-    location = "C:/MainLibrary",
-    enableSearch = true,
-});
-HttpResponseMessage response = await httpClient.PostAsync(url, new StringContent(json, Encoding.UTF8, MediaTypeNames.Application.Json));
-```
+=== "C#"
+
+    ```csharp
+    IDocumentLibraryClient client = ...;
+    Library library = await client.CreateLibraryAsync(new CreateLibraryRequest
+    {
+        Name = "Main Library",
+        Location = "C:/MainLibrary",
+        EnableSearch = true,
+    });
+    ```
+
+=== "C# (Raw)"
+
+    ```csharp
+    HttpClient httpClient = new HttpClient();
+    string url = "https://api.vendorhub.io/libraries?api-version=2019-09-01";
+    string json = JsonConvert.SerializeObject(new
+    {
+        name = "Main Library",
+        location = "C:/MainLibrary",
+        enableSearch = true,
+    });
+    HttpResponseMessage response = await httpClient.PostAsync(url, new StringContent(json, Encoding.UTF8, MediaTypeNames.Application.Json));
+    ```
 
 ### Response
 

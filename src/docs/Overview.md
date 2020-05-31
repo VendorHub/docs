@@ -55,10 +55,10 @@ some_url: https://example.com
 
 ## Example Responses
 
-```cURL tab="cURL"
+```bash
 Example1
 ```
 
-```C# tab="C#"
+```csharp
 Example2
 ```

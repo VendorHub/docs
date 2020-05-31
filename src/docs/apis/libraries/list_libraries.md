@@ -6,7 +6,7 @@
 
 | Name | Type | Format | Required | Description |
 | ---- | ---- | ------ | -------- | ----------- |
-{!_partials/schemas/tenantId_param.md!}
+--8<-- "_partials/schemas/tenantId_param.md"
 
 ## Responses
 
@@ -24,7 +24,7 @@
 
 ### HTTP 400
 
-{!_partials/schemas/error.md!}
+--8<-- "_partials/schemas/error.md"
 
 ## Examples
 
@@ -33,21 +33,27 @@
 !!! note
     Authentication is not shown in these examples. For details refer to the [Authentication](../auth.md) page.
 
-```cURL tab=
-curl --location --request GET 'https://api.vendorhub.io/libraries?api-version=2019-09-01&tenantId=f28300ed-aa67-4cfc-95e2-e473be474df0'
-```
+=== "cURL"
 
-```C# tab=
-IDocumentLibraryClient client = ...;
-Guid tenantId = Guid.Parse("f28300ed-aa67-4cfc-95e2-e473be474df0");
-ICollection<Library> libraries = await client.ListLibrariesAsync(tenantId);
-```
+    ```bash
+    curl --location --request GET 'https://api.vendorhub.io/libraries?api-version=2019-09-01&tenantId=f28300ed-aa67-4cfc-95e2-e473be474df0'
+    ```
 
-```C# tab='C# (Raw)'
-HttpClient httpClient = new HttpClient();
-string url = "https://api.vendorhub.io/libraries?api-version=2019-09-01&tenantId=f28300ed-aa67-4cfc-95e2-e473be474df0";
-HttpResponseMessage response = await httpClient.GetAsync(url);
-```
+=== "C#"
+
+    ```csharp
+    IDocumentLibraryClient client = ...;
+    Guid tenantId = Guid.Parse("f28300ed-aa67-4cfc-95e2-e473be474df0");
+    ICollection<Library> libraries = await client.ListLibrariesAsync(tenantId);
+    ```
+
+=== "C# (Raw)"
+
+    ```csharp
+    HttpClient httpClient = new HttpClient();
+    string url = "https://api.vendorhub.io/libraries?api-version=2019-09-01&tenantId=f28300ed-aa67-4cfc-95e2-e473be474df0";
+    HttpResponseMessage response = await httpClient.GetAsync(url);
+    ```
 
 ### Response
 

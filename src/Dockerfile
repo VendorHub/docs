@@ -2,9 +2,10 @@ FROM nginx:alpine as base
 EXPOSE 80
 
 
-FROM python:alpine as build
+FROM python:buster as build
 
-RUN pip install mkdocs && pip install mkdocs-material && pip install pymdown-extensions && pip install markdown-include
+RUN pip install mkdocs-material && pip install pymdown-extensions 
+# && pip install markdown-include
 
 COPY mkdocs.yml .
 COPY docs ./docs/

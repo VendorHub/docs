@@ -36,20 +36,20 @@ Example of "innererror":
 
 ## __Test Requests__
 
-```cURL tab= 
+```bash 
 Example1
 ```
 
-```C# tab=
+```csharp
 Example2
 ```
 
 ## __Test Responses__
 
-```cURL tab= 
+```bash 
 Example1
 ```
 
-```C# tab=
+```csharp
 Example2
 ```
