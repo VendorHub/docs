@@ -35,7 +35,7 @@ The VendorHub Document Library allows you to provide your storage for each accou
 More storage providers will be added soon, e.g., WebDAV, network shares, file systems, and others.
 
 !!! note "Note"
-    Document indexing requires a BYOS account to function.
+    A BYOS account is required for document indexing.
 
 **[Learn more...](byos.md)**
 
@@ -48,6 +48,9 @@ More storage providers will be added soon, e.g., WebDAV, network shares, file sy
 Traditional document management systems (DMS) require centralized storage of documents in a single logical repository to make use of DMS supported document indexing tagging and searching features.
 
 Document Indexing allows you to treat documents as part of a document library without moving or relocating the files. Document Indexing allows you to centralize the document access while keeping the files in your datacenter. You can associate metadata about the existing files without having to move, copy, or modify the files. Document Indexing also is available for content stored in your BYOS account.
+
+!!! note "Note"
+    Document indexing requires a BYOS account to function.
 
 **[Learn more...](indexing.md)**
 

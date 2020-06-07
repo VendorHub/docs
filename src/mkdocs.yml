@@ -21,12 +21,13 @@ theme:
 
 nav:
     - Home: index.md
-    - Forms: 
-        - Overview: forms/overview.md
-    - 'Document Library': 
-        - Overview: libraries/overview.md
+    #- Forms: 
+    #    - Overview: forms/overview.md
+    - 'Libraries':
+        - 'About Libraries': libraries/overview.md
+        - Architecture: 'libraries/architecture.md'
         - Features: 
-            - 'Summary': libraries/features.md
+            - 'Overview': libraries/features.md
             - 'Multi Tenant': libraries/multi_tenant.md
             - 'Bring-Your-Own-Storage': libraries/byos.md
             - 'Indexing': libraries/indexing.md
@@ -36,12 +37,17 @@ nav:
             - 'Searching': libraries/searching.md
             - 'Alternate Streams': libraries/alternate_streams.md
             - 'Dashboard': libraries/dashboard.md
+        - 'Getting Started': libraries/getting_started.md
+        - 'Libraries SDK': 
+          - Overview: 'libraries/sdk/overview.md'
+          - Reference:
+            - ListLibraries: 'libraries/sdk/list_libraries.md'
     - 'Api Reference':
         - Overview: Overview.md
         - Authentication: apis/auth.md
         - Paths in VendorHub: apis/paths.md
-        - 'Forms': 
-            - 'List Forms': apis/forms/list_forms.md
+        #- 'Forms': 
+        #    - 'List Forms': apis/forms/list_forms.md
         - 'Document Library': 
             - 'List Libraries': apis/libraries/list_libraries.md
             - 'Create Library': apis/libraries/create_library.md
@@ -58,38 +64,6 @@ nav:
             - 'Upsert Tags': apis/libraries/upsert_file_tags.md
             - 'Clear Tags': apis/libraries/clear_file_tags.md
             - 'Remove Tag': apis/libraries/remove_file_tag.md
-        #- 'Operations':
-        #    - Copy: 'copy.md'
-        #    - Create: 'create.md'
-        #    - Delete: 'delete.md'
-        #    - 'List children': 'list_Children.md'
-        #    - Download: 'download.md'
-        #    - Exist: 'exists.md'
-        #    - 'Get info': 'get_info.md'
-        #    - 'Get installation folder': 'get_installation_folder.md'
-        #    - Move: 'move.md'
-        #    - 'List file streams': 'list_file_streams.md'
-        #- 'Forms':
-        #    - 'List Forms' : 'list_forms.md'
-        #    - 'Create Form' : 'create_Form.md'
-        #    - 'install Forms' : 'install_Forms.md'
-        #    - 'Get Form' : 'get_Form.md'
-        #    - 'Submit Form' : 'submit_Form.md'
-        #    - 'Get Submission' : 'get_Submission.md'
-        #    - 'Get Sumbission Attachment' : 'get_Submission_Attachment.md'
-        #    - 'List Webhooks' : 'list_Webhooks.md'
-        #    - 'Create Webhook' : 'create_Webhook.md'
-        #- 'Marketplace':
-        #    - 'List of available apps': 'list_of_available_apps.md'
-        #- 'System':
-        #    - 'Initial setup': 'initial_setup.md'
-        #    - 'Create volume': 'create_Volume.md'
-        #    - 'List volume': 'list_Volume.md'
-        #- 'Directory Watchers':
-        #    'list directory watchers': 'List_directory_watchers.md'
-        #- 'Responses': 
-        #     'Errors': apis/errors.md
-
 plugins:
   - search:
       lang:
@@ -120,9 +94,9 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
-      options:
-        custom_icons:
-          - docs/icons
+      #options:
+      #  custom_icons:
+      #    - docs/icons
   - pymdownx.highlight:
       linenums: true
   - pymdownx.inlinehilite
