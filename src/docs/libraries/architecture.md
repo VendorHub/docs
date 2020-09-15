@@ -21,7 +21,7 @@ Libraries provides an abstract file system over the top of an object storage pro
 !!! note "Note"
     A **storage provider instance** could be an S3 account or bucket, an Azure Blob account or container, and so on.
 
-Multiple libraries can be stored withing a single instance of a storage provider. This allows for dense storage of all your data accross multiple libraries onto a single storage provider instance.
+Multiple libraries can be stored within a single instance of a storage provider. This allows for dense storage of all your data accross multiple libraries onto a single storage provider instance.
 
 !!! note "Note"
     A single library cannot span multiple storage provider instances. Libraries are also not portable between storage providers.
@@ -45,4 +45,4 @@ Indexed files are files that already exist and simply need to be tracked inside 
 The three libraries are all referencing the same storage provider instance, but are referencing different files from within that provider. This allows you to retro-fit an existing set of files into Rixian Libraries with zero changes to the underlying storage provider or their files.
 
 !!! note "Note"
-    You may notice that you can absolutly have two libraries reference the same files. This is completly valid, but care must be taken when changing the underlying file. Libraries does not actively watch for file changes and will not be aware of a missing file until it is accessed.
+    You may notice that you can absolutely have two libraries reference the same files. This is completly valid, but care must be taken when changing the underlying file. Libraries does not actively watch for file changes and will not be aware of a missing file until it is accessed.
