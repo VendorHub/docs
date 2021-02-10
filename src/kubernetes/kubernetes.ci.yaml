@@ -1,56 +1,38 @@
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: vh-web-docs-ingress
+  namespace: apps
+  annotations:
+    kubernetes.io/ingress.class: azure/application-gateway
+    appgw.ingress.kubernetes.io/ssl-redirect: "true"
+    appgw.ingress.kubernetes.io/health-probe-path: "/self"
+    appgw.ingress.kubernetes.io/backend-path-prefix: /
+    cert-manager.io/cluster-issuer: letsencrypt-prod
+    cert-manager.io/acme-challenge-type: http01
+spec:
+  tls:
+  - hosts:
+      - #{DirectServiceHostname}#
+    secretName: vh-web-docs-ingress-secret
+  rules:
+  - host: #{DirectServiceHostname}#
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: vh-web-docs
+          servicePort: 80
+---
 apiVersion: v1
 kind: Service
 metadata:
   name: vh-web-docs
-  annotations:
-    getambassador.io/config: |
-      ---
-      apiVersion: ambassador/v1
-      kind:  Mapping
-      timeout_ms: 30000
-      name:  vh-web-docs-map-#{KubernetesNamespace}#
-      prefix: /_admin/#{KubernetesNamespace}#/vh-web-docs/
-      service: vh-web-docs.#{KubernetesNamespace}#.svc.cluster.local
-      ---
-      apiVersion: ambassador/v1
-      kind:  Mapping
-      timeout_ms: 30000
-      name:  vh-web-docs-map-#{KubernetesNamespace}#-header
-      prefix: /
-      headers:
-        x-rxn-app: vh-web-docs-#{KubernetesNamespace}#
-      service: vh-web-docs.#{KubernetesNamespace}#.svc.cluster.local
-      ---
-      apiVersion: ambassador/v1
-      kind:  Mapping
-      timeout_ms: 30000
-      name:  vh-web-docs-map-#{KubernetesNamespace}#-host
-      prefix: /
-      host: #{KubernetesHostname}#
-      service: vh-web-docs.#{KubernetesNamespace}#.svc.cluster.local
-      ---
-      apiVersion: ambassador/v1
-      kind:  Mapping
-      timeout_ms: 30000
-      name:  vh-web-docs-map-trafficmanager-#{KubernetesNamespace}#-host
-      prefix: /
-      host: #{TrafficManagerHostname}#
-      service: vh-web-docs.#{KubernetesNamespace}#.svc.cluster.local
-      ---
-      apiVersion: ambassador/v1
-      kind:  Mapping
-      timeout_ms: 30000
-      name:  vh-web-docs-map-publichost-#{KubernetesNamespace}#-host
-      prefix: /
-      host: #{PublicHostname}#
-      service: vh-web-docs.#{KubernetesNamespace}#.svc.cluster.local
 spec:
   selector:
     app: vh-web-docs
   ports:
-    - port: 443
-      name: vh-web-docs-https
-      targetPort: http-api
     - port: 80
       name: vh-web-docs-http
       targetPort: http-api
@@ -87,8 +69,8 @@ spec:
           image: #{RegistryName}#/#{ContainerImageName}#:#{ContainerTag}#
           resources:
             requests:
-              memory: "250Mi"
-              cpu: "25m"
+              memory: "150Mi"
+              cpu: "10m"
             limits:
               memory: "1Gi"
               cpu: "1"
