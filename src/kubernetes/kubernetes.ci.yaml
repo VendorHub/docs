@@ -7,7 +7,7 @@ metadata:
   annotations:
     kubernetes.io/ingress.class: azure/application-gateway
     appgw.ingress.kubernetes.io/ssl-redirect: "true"
-    appgw.ingress.kubernetes.io/health-probe-path: "/self"
+    appgw.ingress.kubernetes.io/health-probe-path: "/"
     appgw.ingress.kubernetes.io/backend-path-prefix: /
     cert-manager.io/cluster-issuer: letsencrypt-prod
     cert-manager.io/acme-challenge-type: http01
